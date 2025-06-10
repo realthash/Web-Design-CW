@@ -1,0 +1,72 @@
+nav {
+    position:fixed;
+    font-size: 125%;
+    top: 0;
+    width: 100%;
+    background-color:rgba(41, 41, 41, 0.399);
+    display:flex;
+    justify-content:center;
+    margin:0;
+    padding:auto;
+    z-index: 1000;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 20px 30px;
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    border: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color:rgba(255, 255, 255, 0.227);
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+}
+
+nav a.active {
+    
+    color: rgb(117, 56, 27);
+    background-color: #e6e6e686;
+    font-weight: bold;
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+}
+
+
+#img1{
+    position: fixed;
+    top:0;
+    left:0;
+    padding-left: 30px;
+    padding-top: 5px;
+    z-index: 1001;
+    width: 140px;
+    height: auto;
+}            
+        
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    background-image:url(cleaninghands1.jpg);
+    background-repeat:none;
+    background-position:bottom;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+    font-family: 'Calibri', 'Segoe UI', 'Arial', sans-serif;;
+}
+
+div {
+    font-size: 120%;
+    margin: 100px 0px;
+    padding:0px 150px;
+    text-align: center;
+    color: #ffffff;
+}
