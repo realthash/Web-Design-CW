@@ -1,13 +1,31 @@
+body {
+    margin-top: 100px;
+    padding: 0 250px;
+    color: aliceblue;
+    font-size: 17px;
+
+    background-image:url(/images/cleaninghands1.jpg);
+    background-repeat:none;
+    background-position:bottom;
+    background-attachment:fixed;
+    background-size:cover;
+
+    font-family: 'Calibri', 'Segoe UI', 'Arial', sans-serif;;
+}
+
+
 nav {
     position:fixed;
-    font-size: 18px;
+
+    font-size: 23px;
+    font-weight: bold;
     top: 0;
     left:0;
-    width: 100%;
-    background-color:rgba(41, 41, 41, 0.399);
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.204);
     display:flex;
     justify-content:center;
-    margin:0;
+    align-items: center;
     padding:0px;
     z-index: 1000;
 }
@@ -15,30 +33,28 @@ nav {
 nav a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    padding: 15px 30px;
-    border-bottom-left-radius: 10px; 
-    border-bottom-right-radius: 10px;
+    padding: 13px 30px;
     border: 10px;
     transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color:rgba(255, 255, 255, 0.227);
-    border-bottom-left-radius: 10px; 
-    border-bottom-right-radius: 10px;
+    background:linear-gradient(45deg,rgba(255, 255, 255, 0.217),rgba(48, 218, 227, 0.178));
+    text-decoration: none;
 }
 
 nav a.active {
     
-    color: rgb(90, 213, 237);
-    background-color: #e6e6e686;
-    border-bottom-left-radius: 10px; 
-    border-bottom-right-radius: 10px;
-    font-weight:bolder;
+    color: rgb(3, 44, 53);
+    background:linear-gradient(45deg,rgba(128, 203, 208, 0.432),rgb(30, 188, 255));
+    font-weight: bolder;
 }
 
+p{
+    padding-bottom: 20px;
+}
 
-#img1{
+.logo{
     position: fixed;
     top:0;
     left:0;
@@ -50,24 +66,7 @@ nav a.active {
 }            
         
 
-body {
-    margin: 0;
-    padding: 0;
-    
-    background-image:url(cleaninghands1.jpg);
-    background-repeat:none;
-    background-position:bottom;
-    background-attachment:fixed;
-    background-size: cover;
 
 
-    font-family: 'Calibri', 'Segoe UI', 'Arial', sans-serif;;
-}
 
-div {
-    font-size: 120%;
-    margin: 100px 0px;
-    padding:0px 150px;
-    text-align: center;
-    color: #ffffff;
-}
+
