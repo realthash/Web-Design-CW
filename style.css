@@ -1,22 +1,22 @@
 body {
     margin-top: 100px;
-    padding: 0 250px;
+    padding: 0 300px;
     color: aliceblue;
     font-size: 17px;
-
+    border:2px solid yellow;
     background-image:url(/images/cleaninghands1.jpg);
     background-repeat:none;
     background-position:bottom;
     background-attachment:fixed;
     background-size:cover;
 
-    font-family: 'Calibri', 'Segoe UI', 'Arial', sans-serif;;
+    font-family:'Segoe UI', 'Arial', sans-serif;
 }
 
 
 nav {
     position:fixed;
-
+    font-family:'Calibri','Segoe UI', 'Arial', sans-serif;
     font-size: 23px;
     font-weight: bold;
     top: 0;
@@ -39,14 +39,14 @@ nav a {
 }
 
 nav a:hover {
-    background:linear-gradient(45deg,rgba(255, 255, 255, 0.217),rgba(48, 218, 227, 0.178));
+    color:rgb(80, 229, 255);
     text-decoration: none;
 }
 
 nav a.active {
     
-    color: rgb(3, 44, 53);
-    background:linear-gradient(45deg,rgba(128, 203, 208, 0.432),rgb(30, 188, 255));
+
+    background:rgba(0, 0, 0, 0.532);
     font-weight: bolder;
 }
 
