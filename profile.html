@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <link rel="icon" type="png" href="/images/BlueSanctuaryIcon.PNG">
+        <title>BlueSanctuary </title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+                font-family:'Poppins',sans-serif;
+            }
+            body{
+                background:url('cleaninghands1.jpg')no-repeat center center fixed;
+                background-size:cover;
+                color:#fff;
+                padding:40px 20px;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                
+            }
+            nav{
+                display:flex;
+                justify-content:center;
+                gap:1rem;
+                background-color:#60757e4c;
+
+            }
+            nav a{
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+            nav a:hover {
+                color: #1abc9c;
+            }
+            header{
+                text-align:center;
+                margin-bottom:40px;
+            }
+            header h2{
+                font-size:40px;
+                font-weight:700;
+                color:#fff;
+                margin-bottom:10px;
+            }
+            header h3{
+                font-size:22px;
+                color:#ddd;
+            }
+            
+            .circular-image{
+                width: 160px;
+                height:160px;
+                border-radius:50%;
+                object-fit:cover;
+                border:6px solid #225da1;
+                margin:20px auto;
+                box-shadow:0 0 10px rgba(0,0,0,0.5);
+            }
+            section{
+                max-width:800px;
+                width:90%;
+                margin-bottom:40px;
+                padding:25px;
+                align-items:center;
+                background-color:rgba(255,255,255,0.1);
+                border-radius:15px;
+                box-shadow:0 4px 20px rgba(0,0,0,0.3);
+                transition:transform 0.3s;
+                color:#fff;
+            }
+            section:hover{
+                transform:scale(1.015);
+            }
+            section h2{
+                font-size:28px;
+                border-bottom:2px solid #2f37c9;
+                margin-bottom:15px;
+                padding-bottom:10px;
+            }
+            p{
+                font-style:italic;
+                margin-bottom:20px;
+                line-height:1.6;
+            }
+            ul{
+                list-style-type:square;
+                padding-left:20px;
+            }
+            ul li{
+                margin:10px 0;
+             }
+            .skill-group, .goals-group{
+                margin-bottom:20px;
+            }
+            .skill-group label, .goals-group label{
+                display:block;
+                font-size:16px;
+                margin-bottom:5px;
+                color:#fff;
+            }
+            progress{
+                width:100%;
+                height:15px;
+                border-radius:10px;
+            }
+            progress::-webkit-progress-bar{
+                background-color:#ccc;
+                border-radius:10px;
+            }
+            progress::-webkit-progress-value{
+                background-color:#9e95dc;
+                border-radius:10px;
+            }
+            h2{
+                text-align:center;
+            }
+            .timetable-wrapper{
+                width:60%;
+                margin:20px auto;
+                display:flex;
+                justify-content:center;
+            }
+            .styled-table{
+                width:50%;
+                max-width:1000px;
+                border-collapse:collapse;
+                text-align:center;
+                background-color:#fff;
+                color:#333;
+                border-radius:12px;
+                overflow:hidden;
+                box-shadow:0 0 15px rgba(0,0,0,0.3);
+            }
+            .styled-table thead{
+                background-color:#007777;
+                color:#fff;
+            }
+            .styled-table th,
+            .styled-table td{
+                padding:14px 16px;
+                border:1px solid #ccc;
+            }
+            .styled-table tbody tr:nth-child(even){
+                background-color:#f2f2f2;
+            }
+            .styled-table tbody tr:hover{
+                background-color:#e0f7fa;
+                transition:0.3s ease;
+            }
+            .contact-section{
+                max-width:600px;
+                margin:60px auto;
+                background:rgba(255,255,255,0.1);
+                padding:40px;
+                border-radius:15px;
+                box-shadow:0 8px 20px rgba(0,0,0,0.2);
+            }
+            .contact-section h2{
+                text-align:center;
+                margin-bottom:25px;
+                font-size:32px;
+                color:#fff;
+            }
+            .form-group{
+                margin-bottom:20px;
+
+            }
+            .form-group label{
+                display:block;
+                margin-bottom:8px;
+                font-weight:bold;
+                color:#fff;
+            }
+            .form-group input,
+            .form-group textarea{
+                width:100%;
+                padding:12px;
+                border:none;
+                border-radius:8px;
+                background:#f0f0f0;
+                color:#333;
+                font-size:16px;
+            }
+            .form-group input::placeholder,
+            .form-group textarea::placeholder{
+                color:#888;
+            }
+            .form-buttons{
+                display:flex;
+                gap:10px;
+            }
+            .form-buttons button{
+                flex:1;
+                padding:14px;
+                font-size:16px;
+                font-weight:bold;
+                border:none;
+                border-radius:8px;
+                cursor:pointer;
+                transition:0.3s;
+            }
+            .form-buttons button[type="submit"]{
+                background:#2980b9;
+                color:#fff;
+            }
+            .form-buttons button[type="submit"]:hover{
+                background:#1c6690;
+            }
+            .form-buttons button[type="reset"]{
+                background:#bdc3c7;
+                color:#333;
+            }
+            .form-buttons button[type="reset"]:hover{
+                background:#aab2b4;
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+        <!--navigation bar -->
+        <nav>
+            <a href="home.html"   class="active">Home</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="table.html">Table</a>
+            <a href="profile.html">Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="sitemap.html">Sitemap</a>
+            <a href="team.html">Team</a>
+            <a href="content_ST2.html">Content</a>
+        </nav>
+
+
+
+
+
+        <!--webpage logo-->
+        <div >
+            <a href="home.html"><img src="D:/Osandi/Sem_2/Web_designing/CW/Web-Design-CW/Web-Design-CW/images/BlueSanctuary.PNG" alt="BlueSancuary logo" class="logo"></a>
+        </div> 
+
+
+
+        <header>
+            <h2>Osandi Randeniya</h2>
+            <img src="image.JPG" alt="image" class="circular-image">
+            <h3>Environmental Community Organizer</h3>
+            </header>
+        
+        <section>
+            <h2>Introduction</h2>
+
+            <p>"Join our mission to bring clean water and hygiene education to rural communities. As a volunteer, you’ll help create lasting impact."</p>
+            <ul>
+                <li><strong>Name :</strong> Osandi Pabasara</li>
+                <li><strong>Profession :</strong> Undergraduate Student</li>
+                <li><strong>Age :</strong> 20</li>
+                <li><strong>Location :</strong> Kandana</li>
+             </ul>
+            
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+        
+            <div class="skill-group">
+                <label for="communication">Communication</label><br>
+                <progress value="60" max="100"></progress>
+            </div>
+            <div class="skill-group">
+                <label for="leadership">Leadership<label><br>
+                <progress value="70" max="100"></progress>
+            </div>
+            <div class="skill-group">
+                <label for="confidence">Confidence</label><br>
+                <progress value="60" max="100"></progress>
+            </div>
+        </section>
+
+        <section>
+            <h2>Goals</h2>
+
+            <div class="goals-group">
+                <label for="protect ecosystem">Protect Ecosystem</label><br>
+                <progress value="65" max="100"></progress>
+            </div>
+            <div class="goals-group">
+                <label for="protect water sources">Protect water sources</label><br>
+                <progress value="70" max="100"></progress>
+            </div>
+            <div class="goals-group">
+                <label for="sustainable water management">Sustainable Water Management</label><br>
+                <progress value="50" max="100"></progress>
+            </div>
+        </section>
+
+        <section>
+            <h2>June Timetable</h2>
+            <div class="timetable-wrapper">
+
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8:30 - 11:30 AM</td>
+                        <td>Hygiene Training</td>
+                        <td>School Education program</td>
+                        <td>Well maintenance</td>
+                        <td>public Awareness program</td>
+                        <td>Meeting with the community</td>
+                        <td>Wrkshop program</td>
+                    </tr>
+                    <tr>
+                        <td>1:00 - 2:00 PM</td>
+                        <td>Water quality testing</td>
+                        <td>Community survey</td>
+                        <td>Rainwater Harvesting demo</td>
+                        <td>River clean-up</td>
+                        <td>Planning programs</td>
+                        <td> Meeting</td>
+                    </tr>
+                    <tr>
+                        <td>3:00 - 5:00 PM</td>
+                        <td>Volunteer Training</td>
+                        <td>Water Conservation Games</td>
+                        <td>Policy Discussion</td>
+                        <td>Meeting with the community</td>
+                        <td>Recycling Session</td>
+                        <td>Weekly wrap-up</td>
+                    </tr>
+                    <tr>
+                        <td>5:30 - 6:30 PM</td>
+                        <td></td>
+                        <td>Poster Design for Awareness</td>
+                        <td>Sharing Ideas</td>
+                        <td>Field Report Writing</td>
+                        <td></td>
+                        <td>Feedback Session</td>
+                    </tr>
+                </tbody>    
+            </table>
+        </section>
+
+        <section>
+            <div class="contact-section">
+                <h2>Contact Me</h2>
+                <form action="#" method="post">
+
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer style="background-color: #0000006d; color: white; text-align: center; padding: 20px 0; margin-top: 50px; font-size: 16px;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; padding-bottom: 20px;">
+                    <!-- Contact Info -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Contact Us</h3>
+                        <p>Email: <a href="mailto:info@bluesanctuary.org" style="color: rgb(255, 161, 246); text-decoration: none;">info@bluesanctuary.org</a></p>
+                        <p>Phone: +1 (800) 123-4567</p>
+                        <p>Address: 123 Blue Haven, Ocean City, WC 12345</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Quick Links</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><a href="html.html" style="color: white; text-decoration: none;">Home</a></li>
+                            <li><a href="volunteer.html" style="color: white; text-decoration: none;">Volunteer</a></li>
+                            <li><a href="feedback.html" style="color: white; text-decoration: none;">Feedback</a></li>
+                            <li><a href="sitemap.html" style="color: white; text-decoration: none;">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <!-- Social Media -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Follow Us</h3>
+                        <p>
+                            <a href="https://twitter.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Twitter</a>
+                            <a href="https://facebook.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Facebook</a>
+                            <a href="https://instagram.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Instagram</a>
+                        </p>
+                    </div>
+                </div>
+                <hr style="border: 1px solid rgb(197, 197, 197); width: 80%; margin: 20px auto;">
+                <p style="color: rgb(197, 197, 197); font-size: 14px;">&copy; 2025 BlueSanctuary. All rights reserved.</p>
+            </div>
+        </footer>
+
+        
+
+    </body>
+</html>
