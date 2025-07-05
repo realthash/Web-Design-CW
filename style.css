@@ -61,6 +61,7 @@ nav a.active {
     background: rgba(0, 0, 0, 0.532);/* Applies a semi-transparent black background with 53.2% opacity to the active link */
     font-weight: bolder;/* Increases the boldness of the active link text for distinction */
 }
+ 
 
 p {
     /* Adds 20px of padding below each paragraph to separate it from following content */
@@ -81,4 +82,9 @@ p {
     height: auto;/* Automatically adjusts the logo height to maintain its aspect ratio */
 
     z-index: 1001;/* Ensures the logo stays above other elements with a higher stacking order */
+}
+
+:link{
+    text-decoration: none;/*Ensure links do not include decorations*/
+    color: rgb(95, 206, 225);
 }
