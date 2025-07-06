@@ -1,0 +1,71 @@
+body {
+    margin-top: 100px;
+    padding: 0 250px;
+    color: aliceblue;
+    font-size: 17px;
+
+    background-image:url(/images/cleaninghands1.jpg);
+    background-repeat:none;
+    background-position:bottom;
+    background-attachment:fixed;
+    background-size:cover;
+
+    font-family: 'Calibri', 'Segoe UI', 'Arial', sans-serif;
+}
+
+
+nav{
+    position:fixed;
+    font-size: 23px;
+    font-weight: bold;
+    top: 0;
+    left:0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.204);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding: 0px;
+    z-index: 1000;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 13px 30px;
+    border: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background:linear-gradient(45deg,rgba(255, 255, 255, 0.217),rgba(48, 218, 227, 0.178));
+    text-decoration: none;
+}
+
+nav a.active {
+    
+    color: rgb(3, 44, 53);
+    background:linear-gradient(45deg,rgba(128, 203, 208, 0.432),rgb(30, 188, 255));
+    font-weight: bolder;
+}
+
+p{
+    padding-bottom: 20px;
+}
+
+.logo{
+    position: fixed;
+    top:0;
+    left:0;
+    padding-left: 30px;
+    padding-top: 5px;
+    z-index: 1001;
+    width: 120px;
+    height: auto;
+}            
+        
+
+
+
+
+

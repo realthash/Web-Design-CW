@@ -1,0 +1,255 @@
+.site-footer {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  color: #0a034d;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+body {
+  background-image: url("../images/vol-bglast.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 0;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);  /* You can adjust darkness */
+  z-index: -1;
+}
+
+.volunteer-header {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.volunteer-header h1 {
+  font-size: 40px;
+  color: #0a034d;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif; 
+}
+
+.sort-dropdown {
+  color: #0a034d;
+}
+
+.sort-dropdown select {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+  color: #0a034d;
+}
+
+.volunteer-cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  border: 2px solid rgba(0, 170, 255, 0.4);
+  border-radius: 16px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.7);  /* slightly see-through white */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #003366;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card button {
+  padding: 8px 14px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #005fa3;
+}
+
+.reviews {
+  margin: 40px 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+
+.rating-summary {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.rating-summary h2 {
+  font-size: 24px;
+  color: #0077cc;
+  margin-bottom: 5px;
+}
+
+.rating-summary p {
+  font-size: 14px;
+  color: #555;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background-color: white;
+  border-left: 5px solid #0077cc;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.review-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.review-card p {
+  font-size: 14px;
+  color: #444;
+  margin: 0 0 10px;
+}
+
+.review-card span {
+  font-size: 12px;
+  color: #777;
+}
+.feedback-form {
+  margin: 40px 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feedback-form h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #0077cc;
+  margin-bottom: 20px;
+}
+
+.feedback-form textarea {
+  width: 96%;
+  height: 100px;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  resize: vertical;
+}
+
+.rating-input {
+  text-align: center;
+  font-size: 22px;
+  color: #f4c542;
+  margin-bottom: 20px;
+}
+
+.rating-input span {
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.feedback-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feedback-buttons .primary {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.feedback-buttons .primary:hover {
+  background-color: #005fa3;
+}
+
+.feedback-buttons .secondary {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.feedback-buttons .secondary:hover {
+  background-color: #999;
+}
+
