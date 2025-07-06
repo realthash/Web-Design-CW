@@ -9,25 +9,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
+
+        body{
+            padding: 0 300px;
+        }
+
+        
         table {
+        font-size: 13px;
         width: 100%;
         border-collapse:separate;
         border-spacing:10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: #4f50516d;
-        margin-bottom: 200px;
+        background-color: #c1c3c4a2;
+        margin-bottom: 50px;
         }
 
         th {
-            padding: 20px;
+            padding: 9px;
+            font-weight: bold;
             border: 1px solid #ddd;
             color: #41a2f7;
+            border-top-left-radius: 5px; /* Rounds only the top-left corner */
+            border-top-right-radius: 5px; /* Rounds only the top-right corner */
+            border-bottom-left-radius: 5px; /* Rounds only the bottom-left corner */
+            border-bottom-right-radius: 5px; /* Rounds only the bottom-right corner */
+
             background-color: rgb(255, 255, 255); /* White background for cells to stand out */
         }
         td{
-            padding: 20px;
+            padding: 8px 20px;
             border: 1px solid #ddd;
             background-color: rgb(255, 255, 255); /* White background for cells to stand out */  
+            
+            border-top-left-radius: 5px; /* Rounds only the top-left corner */
+            border-top-right-radius: 5px; /* Rounds only the top-right corner */
+            border-bottom-left-radius: 5px; /* Rounds only the bottom-left corner */
+            border-bottom-right-radius: 5px; /* Rounds only the bottom-right corner */
+
+            text-align: center;
         }
 
         .table-wrapper{
@@ -36,12 +55,27 @@
             overflow: hidden;
         }
         tr:nth-child(odd) td {
-            background-color: #41a2f7; /* Light gray for odd rows' cells */
+            background-color: #41a2f7b6; /* Light gray for odd rows' cells */
         }
 
         tr:nth-child(even) td {
-            background-color: #ffffff; /* Light gray for odd rows' cells */
-            color: rgba(0, 0, 0, 0.1);
+            color: black;
+            background-color: #ffffffc7; /* Light gray for odd rows' cells */
+
+        }
+
+        .thumbnail{
+            height: 40px;
+            width: 40px;
+            display: block;
+            margin: 0px auto;
+        }
+
+        #topic{
+            color:rgb(207, 254, 255);
+            padding:0px 0px 9px 0px;
+            border-bottom-style:outset;
+            border-color:rgb(209, 254, 255);
         }
     </style>
 
@@ -66,8 +100,13 @@
         <!--table mapping-->
         <main>
             <section>
+
+                <h1 id="topic"><i>Global Challenges and Solutions for Clean Water and Sanitation Access</i></h1>
                 <table class="table-wrapper"  aria-label="Global Problems and Solutions for Clean Water and Sanitation">
                     <thead>
+                        <tr>
+                            <th colspan="4"><img src="images/BlueSanctuary.PNG" style="height: 50px; width: auto;"></th>
+                        </tr>
                         <tr>
                             <th>Region/Country</th>
                             <th>Global Problem/Inequality</th>
@@ -77,59 +116,55 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><img src="images/sub_saharan_africa.png" alt="Sub-Saharan Africa icon" class="thumbnail"> Sub-Saharan Africa</td>
+                            <td><img src="images/Africa.png" alt="Sub-Saharan Africa icon" class="thumbnail"> Sub-Saharan Africa</td>
                             <td>3.5 billion lack safely managed sanitation; 419 million practice open defecation, exacerbating diseases like cholera. Rural areas lag significantly.</td>
                             <td>USAID’s WARIDI program builds latrines and promotes hygiene in rural Tanzania and Ethiopia, reaching thousands.</td>
-                            <td>🌱 Emerging</td>
+                            <td> Budding 🌱</td>
                         </tr>
                         <tr>
-                            <td><img src="images/south_asia.png" alt="South Asia icon" class="thumbnail"> South Asia</td>
+                            <td><img src="images/Asia.png" alt="South Asia icon" class="thumbnail"> South Asia</td>
                             <td>Poorest fifth of population 13 times less likely to have sanitation access, with open defecation common in rural India.</td>
                             <td>Swachh Bharat Mission (India) constructed 100 million toilets, reducing open defecation significantly.</td>
-                            <td>💧 Moderate</td>
+                            <td> Moderate 💧</td>
                         </tr>
                         <tr>
-                            <td><img src="images/middle_east.png" alt="Middle East icon" class="thumbnail"> Middle East (Iraq)</td>
+                            <td><img src="images/MiddleEast.png" alt="Middle East icon" class="thumbnail"> Middle East (Iraq)</td>
                             <td>Water scarcity due to climate-induced drought and conflict damages infrastructure, affecting 5.1 million in South Sudan.</td>
                             <td>UNICEF’s Lologo water treatment plant in South Sudan provides clean water to 100,000 people.</td>
-                            <td>🌱 Emerging</td>
+                            <td> Budding 🌱</td>
                         </tr>
                         <tr>
-                            <td><img src="images/latin_america.png" alt="Latin America icon" class="thumbnail"> Latin America (Venezuela)</td>
+                            <td><img src="images/LatinAmerica.png" alt="Latin America icon" class="thumbnail"> Latin America (Venezuela)</td>
                             <td>Economic crisis disrupts water access; 80% lack consistent clean water, costing $3 per bottle.</td>
                             <td>UNICEF’s Wüimpala water treatment plant rehabilitation serves 867,965 people in Zulia State.</td>
-                            <td>💧 Moderate</td>
+                            <td> Moderate 💧</td>
                         </tr>
                         <tr>
-                            <td><img src="images/usa.png" alt="USA icon" class="thumbnail"> USA (Flint, MI)</td>
+                            <td><img src="images/USA.png" alt="USA icon" class="thumbnail"> USA (Flint, MI)</td>
                             <td>Lead contamination in water supply disproportionately affects low-income communities, causing health crises.</td>
                             <td>Pipe replacement programs and federal funding aim to restore safe water access.</td>
-                            <td>⚠️ Limited</td>
+                            <td> Limited ⚠️</td>
                         </tr>
                         <tr>
-                            <td><img src="images/europe.png" alt="Europe icon" class="thumbnail"> Europe (Germany)</td>
+                            <td><img src="images/Europe.png" alt="Europe icon" class="thumbnail"> Europe (Germany)</td>
                             <td>High access (99%) but small rural supplies face lower safety standards than urban systems.</td>
                             <td>EU-compliant wastewater treatment upgrades enhance nutrient removal and sustainability.</td>
-                            <td>✅ High</td>
+                            <td> High ✅</td>
                         </tr>
                         <tr>
-                            <td><img src="images/asia.png" alt="Asia icon" class="thumbnail"> Asia (Bangladesh)</td>
+                            <td><img src="images/Asia.png" alt="Asia icon" class="thumbnail"> Asia (Bangladesh)</td>
                             <td>39% have safely managed sanitation; urban slums face sewage overflow and contamination.</td>
                             <td>World Bank’s Dhaka Sanitation Improvement Project ($330M) improves fecal sludge management.</td>
-                            <td>💧 Moderate</td>
+                            <td> Moderate 💧</td>
                         </tr>
                         <tr>
-                            <td><img src="images/global.png" alt="Global icon" class="thumbnail"> Global</td>
+                            <td><img src="images/Global.png" alt="Global icon" class="thumbnail"> Global</td>
                             <td>2.2 billion lack safe drinking water; women and girls spend 250 million hours daily collecting water, limiting education.</td>
                             <td>World Vision’s WASH programs reach one person every 10 seconds with clean water, supporting 9.4 million households.</td>
-                            <td>🌱 Emerging</td>
+                            <td> Budding 🌱</td>
                         </tr>
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="4">Data sourced from WHO/UNICEF JMP (2022, washdata.org), World Bank (2022–2025, data.worldbank.org), USAID Global Waters (2019, medium.com/global-waters), and UNICEF (2023, unicef.org).</td>
-                        </tr>
-                    </tfoot>
+
                 </table>
             </section>
 

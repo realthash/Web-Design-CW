@@ -6,7 +6,6 @@ body {
     color: aliceblue;/* Sets the text color to aliceblue, a soft light blue-white shade */
     font-size: 17px;/* Defines the font size of all text within the body to 17 pixels */   
 
-    border: 2px solid yellow;/* Adds a 2px solid yellow border around the entire body element */
 
     background-image: url(/images/cleaninghands1.jpg);/* Uses an image 'cleaninghands1.jpg' from the /images directory as the background */
     background-repeat: no-repeat;/* Prevents the background image from tiling or repeating across the element */
@@ -87,4 +86,9 @@ p {
 :link{
     text-decoration: none;/*Ensure links do not include decorations*/
     color: rgb(95, 206, 225);
+}
+
+footer{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
