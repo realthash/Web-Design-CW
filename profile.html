@@ -1,24 +1,104 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+
+<html lang = "en">
     <head>
+        <link rel="icon" type="png" href="/images/BlueSanctuaryIcon.PNG">
+        <title>BlueSanctuary </title>
+        <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
-        <title>User Profile Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <style>
             *{
                 margin:0;
                 padding:0;
                 box-sizing:border-box;
-                font-family:'Poppins',sans-serif;
+                font-family:'Segoe UI',sans-serif;
             }
-            body{
-                background:linear-gradient(135deg,#2c3e50,#4ca1af);
-                color:#fff;
-                padding:40px 20px;
-                display:flex;
-                flex-direction:column;
-                align-items:center;
+            body {
+    
+                margin-top: 100px;/* Creates a 100px space between the top edge of the page and the body content */    
+                padding: 0 200px;/* Applies 0 padding on top and bottom, and 200px padding on left and right to center the content */
+
+                color: aliceblue;/* Sets the text color to aliceblue, a soft light blue-white shade */
+                font-size: 17px;/* Defines the font size of all text within the body to 17 pixels */   
+
+
+                background-image: url(/images/cleaninghands1.jpg);/* Uses an image 'cleaninghands1.jpg' from the /images directory as the background */
+                background-repeat: no-repeat;/* Prevents the background image from tiling or repeating across the element */
+                background-position: bottom; /* Aligns the background image to the bottom of the body element */
+                background-attachment: fixed; /* Keeps the background image stationary while scrolling the page content */
+                background-size: cover;    /* Stretches the background image to fully cover the body element */
                 
+                font-family: 'Segoe UI', 'Arial', sans-serif;/* Sets the preferred font to 'Segoe UI', with 'Arial' and sans-serif as fallbacks */
             }
+
+            nav {
+    
+                position: fixed;/* Locks the navigation bar in place at the top of the viewport, even when scrolling */    
+                font-family: 'Calibri', 'Segoe UI', 'Arial', sans-serif;/* Defines the font stack for navigation text, starting with 'Calibri' and falling back to 'Segoe UI', 'Arial', and sans-serif */
+                font-size: 23px;    /* Sets the font size of navigation text to 23 pixels for prominence */
+                font-weight: bold;/* Makes the navigation text bold for emphasis */
+                
+                top: 0;/* Positions the navigation bar exactly at the top edge of the viewport */
+                left: 0;/* Extends the navigation bar from the leftmost edge of the viewport */
+                right: 0; /* Extends the navigation bar to the rightmost edge of the viewport */
+                
+                background-color: rgba(255, 255, 255, 0.204);/* Applies a semi-transparent white background with 20.4% opacity for subtle contrast */
+                
+                display: flex;/* Arranges navigation items in a horizontal row using flexbox */
+                justify-content: center;/* Centers the navigation items horizontally within the bar */
+                align-items: center;/* Vertically aligns the navigation items to the middle of the bar */
+
+                padding: 0px;    /* Removes all padding from the navigation bar for a tight layout */
+    
+                z-index: 1000;/* Places the navigation bar above other elements with a high stacking order */
+            }
+
+            nav a {
+   
+                color: rgb(255, 255, 255); /* Colors all navigation links white for visibility against the background */
+                text-decoration: none;/* Removes the default underline from navigation links for a cleaner look */
+                
+                padding: 13px 30px;/* Adds 13px padding on top/bottom and 30px on left/right for clickable area spacing */
+                
+                transition: background-color 0.3s ease;/* Smoothly transitions the background color over 0.3 seconds when changed */
+            }
+
+            nav a:hover {
+    
+                color: rgb(80, 229, 255);/* Changes the link color to a light cyan-blue when hovered over */
+                
+                text-decoration: none;/* Ensures no underline appears when hovering over the link */
+            }
+
+            nav a.active {
+    
+                background: rgba(0, 0, 0, 0.532);/* Applies a semi-transparent black background with 53.2% opacity to the active link */
+                font-weight: bolder;/* Increases the boldness of the active link text for distinction */
+            }
+            p {
+                /* Adds 20px of padding below each paragraph to separate it from following content */
+                padding-bottom: 20px;
+            }
+
+            .logo {
+    
+                position: fixed;/* Fixes the logo in a stationary position relative to the viewport */
+                    
+                top: 0;/* Places the logo at the top edge of the viewport */
+                left: 0;/* Aligns the logo to the left edge of the viewport */
+                    
+                padding-left: 30px;/* Adds 30px of padding to the left of the logo for spacing from the edge */
+                padding-top: 5px;/* Adds 5px of padding above the logo for slight offset from the top */
+                    
+                width: 120px;/* Sets the logo image width to 120 pixels */   
+                height: auto;/* Automatically adjusts the logo height to maintain its aspect ratio */
+
+                z-index: 1001;/* Ensures the logo stays above other elements with a higher stacking order */
+            }
+ 
+
             header{
                 text-align:center;
                 margin-bottom:40px;
@@ -26,12 +106,12 @@
             header h2{
                 font-size:40px;
                 font-weight:700;
-                color:#f0db4f;
+                color:aqua;
                 margin-bottom:10px;
             }
             header h3{
                 font-size:22px;
-                color:#ddd;
+                color:#eee;
             }
             
             .circular-image{
@@ -39,15 +119,17 @@
                 height:160px;
                 border-radius:50%;
                 object-fit:cover;
-                border:6px solid #f0db4f;
+                background-color:#467ba3d7;
+                border:6px solid ;
                 margin:20px auto;
                 box-shadow:0 0 10px rgba(0,0,0,0.5);
             }
             section{
-                max-width:800px;
-                width:90%;
+                max-width:80%;
+                width:60%;
                 margin-bottom:40px;
-                padding:25px;
+                padding:10px;
+                align-items:center;
                 background-color:rgba(255,255,255,0.1);
                 border-radius:15px;
                 box-shadow:0 4px 20px rgba(0,0,0,0.3);
@@ -59,7 +141,7 @@
             }
             section h2{
                 font-size:28px;
-                border-bottom:2px solid #f0db4f;
+                border-bottom:2px solid aqua;
                 margin-bottom:15px;
                 padding-bottom:10px;
             }
@@ -69,7 +151,7 @@
                 line-height:1.6;
             }
             ul{
-                list-style-type:square;
+                list-style-type:circle;
                 padding-left:20px;
             }
             ul li{
@@ -82,7 +164,7 @@
                 display:block;
                 font-size:16px;
                 margin-bottom:5px;
-                color:#f0db4f;
+                color:#fff;
             }
             progress{
                 width:100%;
@@ -94,20 +176,32 @@
                 border-radius:10px;
             }
             progress::-webkit-progress-value{
-                background-color:#f0db4f;
+                background-color:#467ba3d7;
                 border-radius:10px;
             }
             h2{
                 text-align:center;
             }
+            .image-container{ 
+                padding:10px;
+                transition:transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .image-container img{
+                width:100px;
+                height:auto;
+                align-items:center;
+                transition:transform 0.3s;
+            }
+            .image-container:hover{
+                transform:scale(1.05);
+            }
             .timetable-wrapper{
-                width:60%;
-                margin:20px 0;
+                width:30%;
+                margin:20px auto;
                 display:flex;
                 justify-content:center;
             }
             .styled-table{
-                width:50%;
                 max-width:1000px;
                 border-collapse:collapse;
                 text-align:center;
@@ -145,7 +239,7 @@
                 text-align:center;
                 margin-bottom:25px;
                 font-size:32px;
-                color:#f0db4f;
+                color:#fff;
             }
             .form-group{
                 margin-bottom:20px;
@@ -199,27 +293,52 @@
             .form-buttons button[type="reset"]:hover{
                 background:#aab2b4;
             }
+            :link{
+                text-decoration: none;/*Ensure links do not include decorations*/
+                color: rgb(95, 206, 225);
+            }
+
+            footer{
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
         </style>
     </head>
+
     <body>
+
+
+        <!--navigation bar -->
+        <nav>
+            <a href="home.html"   class="active">Home</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="table.html">Table</a>
+            <a href="profile.html">Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="sitemap.html">Sitemap</a>
+            <a href="team.html">Team</a>
+            <a href="content_ST2.html">Content</a>
+        </nav>
+
+
+
+
+
+        <!--webpage logo-->
+        <div >
+            <a href="home.html"><img src="D:/Osandi/Sem_2/Web_designing/CW/Web-Design-CW/Web-Design-CW/images/BlueSanctuary.PNG" alt="BlueSancuary logo" class="logo"></a>
+        </div> 
+
+
+
         <header>
-        <h2>Osandi Randeniya</h2>
-        <img src="image.JPG" alt="image" class="circular-image">
-        <h3>Environmental Community Organizer</h3>
+            <h2>Blue Sanctuary</h2>
+            <img src="image.JPG" alt="image" class="circular-image">
+            <h3>Environmental Community Organizer</h3>
+
+             <p>"Join our mission to bring clean water and hygiene education to rural communities. As a volunteer, you’ll help create lasting impact."</p>
         </header>
         
-        <section>
-            <h2>Introduction</h2>
-
-            <p>"Join our mission to bring clean water and hygiene education to rural communities. As a volunteer, you’ll help create lasting impact."</p>
-            <ul>
-                <li><strong>Name :</strong> Osandi Pabasara</li>
-                <li><strong>Profession :</strong> Undergraduate Student</li>
-                <li><strong>Age :</strong> 20</li>
-                <li><strong>Location :</strong> Kandana</li>
-             </ul>
-            
-        </section>
 
         <section>
             <h2>Skills</h2>
@@ -229,34 +348,71 @@
                 <progress value="60" max="100"></progress>
             </div>
             <div class="skill-group">
-                <label for="leadership">Leadership<label><br>
+                <label for="leadership">Resource Management<label><br>
                 <progress value="70" max="100"></progress>
             </div>
             <div class="skill-group">
-                <label for="confidence">Confidence</label><br>
+                <label for="confidence">Community Mobilization</label><br>
                 <progress value="60" max="100"></progress>
             </div>
         </section>
 
         <section>
-            <h2>Goals</h2>
+            <h2>Goals & Aspirations</h2>
 
-            <div class="goals-group">
-                <label for="protect ecosystem">Protect Ecosystem</label><br>
-                <progress value="65" max="100"></progress>
-            </div>
-            <div class="goals-group">
-                <label for="protect water sources">Protect water sources</label><br>
-                <progress value="70" max="100"></progress>
-            </div>
-            <div class="goals-group">
-                <label for="sustainable water management">Sustainable Water Management</label><br>
-                <progress value="50" max="100"></progress>
+            <ul>
+                <li>
+                    <div class="goals-group">
+                        <label for="protect ecosystem">Protect Ecosystem</label><br>
+                
+                    </div>
+                </li>
+                <li>
+                    <div class="goals-group">
+                        <label for="protect water sources">Protect water sources</label><br>
+                    </div>
+                </li>
+                <li>
+                    <div class="goals-group">
+                        <label for="sustainable water management">Sustainable Water Management</label><br>
+                    </div>
+                </li>
+                <li>
+                    <div class="goals-group">
+                        <label for="launching cleaning projects">Launching Cleaning Projects</label><br>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2><strong>Volunteering Activities</strong></h2>
+            <ul>
+                <li><strong>Fundraising</strong></li>
+                <li><strong>Marine and Coastal Conservation</strong></li>
+                <li><strong>Community Education and Advocacy</strong></li>
+                <li><strong>Water Projects</strong></li>
+                <li><strong>Watershed Management</strong></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>UN Golas I Support</h2>
+            <div class="image-container">
+                <a href="https://sdgs.un.org/goals/goal1">
+                    <img src="Goal_1.jpg" alt="Goal_1">
+                </a>
+                <a href="https://sdgs.un.org/goals/goal4">
+                    <img src="Goal_4.jpg" alt="Goal_4">
+                </a>
+                <a href="https://sdgs.un.org/goals/goal2">
+                    <img src="Goal_2.jpg" alt="Goal_2">
+                </a>
             </div>
         </section>
 
-        </section>
-            <h2>June Timetable</h2>
+        <section>
+            <h2>Timetable</h2>
             <div class="timetable-wrapper">
 
             <table class="styled-table">
@@ -311,31 +467,92 @@
                 </tbody>    
             </table>
         </section>
-    
-        <div class="contact-section">
-            <h2>Contact Me</h2>
-            <form action="#" method="post">
 
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
+        <section>
+            <div class="contact-section">
+                <h2>Contact Me</h2>
+                <form action="#" method="post">
 
-                <div class="form-group">
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
-                </div>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    </div>
 
-                <div class="form-buttons">
-                    <button type="submit">Submit</button>
-                    <button type="reset">Reset</button>
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer style="background-color: #0000006d; color: white; text-align: center; padding: 20px 0; margin-top: 50px; font-size: 16px;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; padding-bottom: 20px;">
+                    <!-- Contact Info -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Contact Us</h3>
+                        <p>Email: <a href="mailto:info@bluesanctuary.org" style="color: rgb(255, 161, 246); text-decoration: none;">info@bluesanctuary.org</a></p>
+                        <p>Phone: +1 (800) 123-4567</p>
+                        <p>Address: 123 Blue Haven, Ocean City, WC 12345</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Quick Links</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><a href="html.html" style="color: white; text-decoration: none;">Home</a></li>
+                            <li><a href="volunteer.html" style="color: white; text-decoration: none;">Volunteer</a></li>
+                            <li><a href="feedback.html" style="color: white; text-decoration: none;">Feedback</a></li>
+                            <li><a href="sitemap.html" style="color: white; text-decoration: none;">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <!-- Social Media -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Follow Us</h3>
+                        <p>
+                            <a href="https://twitter.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Twitter</a>
+                            <a href="https://facebook.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Facebook</a>
+                            <a href="https://instagram.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Instagram</a>
+                        </p>
+                    </div>
                 </div>
-            </form>
-        </div>
+                <hr style="border: 1px solid rgb(197, 197, 197); width: 80%; margin: 20px auto;">
+                <p style="color: rgb(197, 197, 197); font-size: 14px;">&copy; 2025 BlueSanctuary. All rights reserved.</p>
+            </div>
+        </footer>
+
+        
+
     </body>
 </html>

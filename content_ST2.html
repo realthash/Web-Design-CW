@@ -1,0 +1,382 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="icon" type="png" href="/images/BlueSanctuaryIcon.PNG">
+        <title>BlueSanctuary </title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+            }
+            body {
+    
+                margin-top: 100px;/* Creates a 100px space between the top edge of the page and the body content */    
+                padding: 0 200px;/* Applies 0 padding on top and bottom, and 200px padding on left and right to center the content */
+
+                color: aliceblue;/* Sets the text color to aliceblue, a soft light blue-white shade */
+                font-size: 17px;/* Defines the font size of all text within the body to 17 pixels */   
+
+
+                background-image: url(/images/cleaninghands1.jpg);/* Uses an image 'cleaninghands1.jpg' from the /images directory as the background */
+                background-repeat: no-repeat;/* Prevents the background image from tiling or repeating across the element */
+                background-position: bottom; /* Aligns the background image to the bottom of the body element */
+                background-attachment: fixed; /* Keeps the background image stationary while scrolling the page content */
+                background-size: cover;    /* Stretches the background image to fully cover the body element */
+                
+                font-family: 'Segoe UI', 'Arial', sans-serif;/* Sets the preferred font to 'Segoe UI', with 'Arial' and sans-serif as fallbacks */
+            }
+            header{
+                color:white;
+                text-align:center;
+                padding:20px;
+                box-shadow:0 4px 6px rgba(0,0,0,0.1);
+
+            }
+            nav {
+    
+                position: fixed;/* Locks the navigation bar in place at the top of the viewport, even when scrolling */    
+                font-family: 'Calibri', 'Segoe UI', 'Arial', sans-serif;/* Defines the font stack for navigation text, starting with 'Calibri' and falling back to 'Segoe UI', 'Arial', and sans-serif */
+                font-size: 23px;    /* Sets the font size of navigation text to 23 pixels for prominence */
+                font-weight: bold;/* Makes the navigation text bold for emphasis */
+                    
+                top: 0;/* Positions the navigation bar exactly at the top edge of the viewport */
+                left: 0;/* Extends the navigation bar from the leftmost edge of the viewport */
+                right: 0; /* Extends the navigation bar to the rightmost edge of the viewport */
+                    
+                background-color: rgba(255, 255, 255, 0.204);/* Applies a semi-transparent white background with 20.4% opacity for subtle contrast */
+                    
+                display: flex;/* Arranges navigation items in a horizontal row using flexbox */
+                justify-content: center;/* Centers the navigation items horizontally within the bar */
+                align-items: center;/* Vertically aligns the navigation items to the middle of the bar */
+
+                padding: 0px;    /* Removes all padding from the navigation bar for a tight layout */
+                    
+                z-index: 1000;/* Places the navigation bar above other elements with a high stacking order */
+            }
+
+            nav a {
+   
+                color: rgb(255, 255, 255); /* Colors all navigation links white for visibility against the background */
+                text-decoration: none;/* Removes the default underline from navigation links for a cleaner look */
+                
+                padding: 13px 30px;/* Adds 13px padding on top/bottom and 30px on left/right for clickable area spacing */
+    
+                transition: background-color 0.3s ease;/* Smoothly transitions the background color over 0.3 seconds when changed */
+            }
+
+            nav a:hover {
+    
+                color: rgb(80, 229, 255);/* Changes the link color to a light cyan-blue when hovered over */
+                
+                text-decoration: none;/* Ensures no underline appears when hovering over the link */
+            }
+
+            nav a.active {
+    
+                background: rgba(0, 0, 0, 0.532);/* Applies a semi-transparent black background with 53.2% opacity to the active link */
+                font-weight: bolder;/* Increases the boldness of the active link text for distinction */
+            }
+            .bottom-bar{
+                margin-top:80px;
+                background-color:rgba(255,255,255,0.1);
+                padding:10px 0;
+                width:100%;
+                text-align:center;
+            }
+            .bottom-bar a{
+                margin:0 15px;
+                color:white;
+                font-weight:bold;
+            }
+
+            h1, h2{
+                text-align:center;
+                margin:20px;
+                color:#fff;
+            }
+            p {
+                /* Adds 20px of padding below each paragraph to separate it from following content */
+                padding-bottom: 20px;
+            }
+
+            .logo {
+    
+                position: fixed;/* Fixes the logo in a stationary position relative to the viewport */
+                
+                top: 0;/* Places the logo at the top edge of the viewport */
+                left: 0;/* Aligns the logo to the left edge of the viewport */
+    
+                padding-left: 30px;/* Adds 30px of padding to the left of the logo for spacing from the edge */
+                padding-top: 5px;/* Adds 5px of padding above the logo for slight offset from the top */
+                
+                width: 120px;/* Sets the logo image width to 120 pixels */   
+                height: auto;/* Automatically adjusts the logo height to maintain its aspect ratio */
+
+                z-index: 1001;/* Ensures the logo stays above other elements with a higher stacking order */
+            }
+
+            section{
+                padding:40px 20px;
+                margin-bottom:40px;
+                border-radius:10px;
+                width:70%;
+                max-width:1000px;
+                background-color:rgba(255,255,255,0.1);
+                color:#fff;
+                align-items:center;
+                box-shadow:0 4px 20px rgba(0,0,0,0.3);
+                transition:transform 0.3s;
+            }
+
+            .image-container img{
+                max-width:40%;
+                height:auto;
+                margin:auto;
+                margin-top:50px;
+                box-shadow:0 0 10px rgba(0,0,0,0.2);
+                display:flex;
+                justify-content:center;
+                
+            }
+            .top-button{
+                display:flex;
+                flex-direction:column;
+                text-align:center;
+                background-color:#6700c1;
+                color:white;
+            }
+            :link{
+                text-decoration: none;/*Ensure links do not include decorations*/
+                color: rgb(95, 206, 225);
+            }
+
+            footer{
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+        </style>
+    </head>
+    <body id="top">
+
+        <!--navigation bar -->
+        <nav>
+            <a href="home.html"   class="active">Home</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="table.html">Table</a>
+            <a href="profile.html">Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="sitemap.html">Sitemap</a>
+            <a href="team.html">Team</a>
+            <a href="content_ST2.html">Content</a>
+        </nav>
+
+
+
+
+
+       <!--webpage logo-->
+        <div >
+            <a href="home.html"><img src="D:/Osandi/Sem_2/Web_designing/CW/Web-Design-CW/Web-Design-CW/images/BlueSanctuary.PNG" alt="BlueSancuary logo" class="logo"></a>
+        </div> 
+
+
+        <!--navigarion bar-->
+        <nav class="bottom-bar">
+            <a href="#causes">Causes</a>
+            <a href="#impact">Impacts</a>
+            <a href="#regions">Affected Regions</a>
+            <a href="#solutions">Solutions</a>
+        </nav>
+
+        <header>
+            <h1>Global Water Crisis and Sanitation </h1>
+            <p>Understanding the growning global challenge of water scarcity and pollution</p>
+        </header>
+
+        <section id="#causes">
+            <h2>Causes of the Global Water Crisis and Sanitation</h2>
+            <p>The crisis stems from a convergence of environmental, human abnd systemic factors:</p>
+            
+            <ol>
+                <li><strong>Physical Water Scarsity</strong>
+                    <ul>
+                        <li><strong>Limited Freshwater Availability:</strong></li>
+                            <p>Only 3% of the Earth's water is freshwater and two thirds of that ia locked in glaciers or otherwise unavailable. This leaves just 0.3% of global water accessible for human use.</p><br>
+                            <div class="image-container">
+                                <img src="image3.jpg" alt="image3">
+                            </div>
+
+                        <li><strong>Climate Change</strong></li>
+                            <p>Risisng global temperature disrupt the hydrological cycle, leading to unpredictable rainfall, prolonged droughts and increased flooding.</p>
+                            <ul>
+                                <li>In 2023, global rivers experienced the driest conditions in over 30 years, with record-low water levels in the Amazon and Mississippi basins.</li>
+                                <li>Glaciers lost over 600 gigatonnes of water in 2022-2023, the largest mass loss in 50 years, impacting water supplies in regions like the Himalayas and Andes.</li>
+                            </ul>
+                    
+                    </ul>
+                </li>
+
+                <li><strong>Economic Water Scarcity</strong>
+                    <ul>
+                        <li><strong>Lack of Infrastructure</strong></li>
+                        <p>In many developing nations, inadequate investment in water infrastructure limits access to clean water. Sub-Saharan Africa , for instance, suffers from economic water scarsity due to poor distribution systems.</p>
+
+                        <li><strong>Poor Management</strong></li>
+                        <p>Mismanagement , such as inefficient irrigationsystems in agriculture, wastes significant amounts of water. Agriculture consumes 70% of global freshwater, with up to 90% in arid regions.</p>
+                    </ul>
+                </li>
+
+                <li><strong>Water Pollution</strong></li>
+                    <p>Pollution from industry, sewage and agriculture introduces harmful substances into water sources, reducing both water quality and availability.</p>
+                    <p>Over 80% of global wastewater is released into water bodies untreated.</p>
+                <li><strong>Population growth and Urbanization</strong></li>
+                <ul>
+                    <li>Rapid urbanization increases demand while overwheling water and sanitation systems.</li>
+                    <li>Informal settlements often lack basic sanitation facilities.</li>
+                </ul>
+                <div class="image-container">
+                    <img src="Globalwarming.jpg" alt="Globalwarming">
+                </div>
+            </ol>
+        </section>
+
+        <section id="#impact">
+            <header>
+                <h1>Impacts of Global Water Crisis and Sanitation</h1>
+            </header>
+
+            <section>
+                <ol>
+                    <li><strong>Health Hazards</strong></li>
+                    <p>
+                        Over 2 billion people consume unsafe drinking water.<br>
+                        Waterborn diseases like;
+                        <ul>
+                            <li>Cholera</li>
+                            <li>Dysentery</li>
+                            <li>Typhoid</li>
+                        </ul>
+                        claim thousands of lives daily, especially among children.
+                    </p>
+
+                    <li><strong>Economic Consequences</strong></li>
+                    <p>
+                        Lack of acccess to water and sanitation reduces productivity, increases healthcare costs and hampers education. Women and girls are disproportionately affected, often walking long distances for water and lacking safe sanitation facilities.
+                    </p>
+                </ol>
+
+                <div class="image-container">
+                    <img src="image9.jpg" alt="image9">
+                </div>
+            </section>
+
+            <div class="link-container">
+                <a href="https://www.solidarites.org/en/taking-aid-further/combatting-waterborne-diseases/?msclkid=9268712737e41ce73a3c1945a497f582" target="blank">
+                    Learn More 
+                </a>
+            </div>
+        </section>
+
+        <section id="#regions">
+
+            <h1>Regions Affected</h1>
+
+            <ol>
+                <li><strong>Sub-Saharan Africa</strong>
+                    <ul>
+                        <li>Over 400 million people lack access to clean drinking water.</li>
+                        <li>Infrastructure gaps, droughts and poverty worsen the crisis.</li>
+                    </ul>
+                </li>
+                <li><strong>South Asia</strong>
+                    <ul>
+                        <li>Countries like India, Pakistan and Bangladesh face severe groundwater depletion and pollution.</li>
+                        <li>Poor sanitation in rural and urban slums remain a major health risk.</li>
+                    </ul>
+                </li>
+                <li><strong>Middle East and North Africa(MENA)</strong>
+                    <ul>
+                        <li>The world's most water-scarce region, heavily dependent on desalination and imports.</li>
+                        <li>Climate change is intensifying regional water conflicts.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section id="#solutions">
+            <h2>Solutions & Recommendations</h2>
+
+            <ol>
+                <li><strong>Investment in Infrastructure</strong>
+                    <p>Build and maintain water pipelines, purification systems and toilets - especially in rural and low-income areas.</p>
+                </li>
+
+                <li><strong>Pollution Control</strong>
+                    <p>Enforce laws to prevent industrial dumping and improve wastewater treatment.</p>
+                </li>
+
+                <li><strong>Policy and Global Cooperation</strong>
+                    <ul>
+                        <li>Implement integrated water resources management(WRM).</li>
+                        <li>Support global goals like UN Sustainable Development Goal 6:<i>Clean Water and Sanitation for All.</i></li>
+                    </ul>
+                </li>
+            </ol>
+
+        </section>
+
+        <!--Image-->
+        <div class="image-container">
+            <img src="OIP.jpg" alt="OIP">
+        </div>
+
+
+
+
+
+        <a href="#top" class="top-button">Go to Top</a>
+
+
+         <footer style="background-color: #0000006d; color: white; text-align: center; padding: 20px 0; margin-top: 50px; font-size: 16px;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; padding-bottom: 20px;">
+                    <!-- Contact Info -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Contact Us</h3>
+                        <p>Email: <a href="mailto:info@bluesanctuary.org" style="color: rgb(255, 161, 246); text-decoration: none;">info@bluesanctuary.org</a></p>
+                        <p>Phone: +1 (800) 123-4567</p>
+                        <p>Address: 123 Blue Haven, Ocean City, WC 12345</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Quick Links</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><a href="html.html" style="color: white; text-decoration: none;">Home</a></li>
+                            <li><a href="volunteer.html" style="color: white; text-decoration: none;">Volunteer</a></li>
+                            <li><a href="feedback.html" style="color: white; text-decoration: none;">Feedback</a></li>
+                            <li><a href="sitemap.html" style="color: white; text-decoration: none;">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <!-- Social Media -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Follow Us</h3>
+                        <p>
+                            <a href="https://twitter.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Twitter</a>
+                            <a href="https://facebook.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Facebook</a>
+                            <a href="https://instagram.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Instagram</a>
+                        </p>
+                    </div>
+                </div>
+                <hr style="border: 1px solid rgb(197, 197, 197); width: 80%; margin: 20px auto;">
+                <p style="color: rgb(197, 197, 197); font-size: 14px;">&copy; 2025 BlueSanctuary. All rights reserved.</p>
+            </div>
+        </footer>
+
+
+    </body>
+</html>
