@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="png" href="/images/BlueSanctuaryIcon.PNG">
+        <title>BlueSanctuary </title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+            }
+            body {
+    
+                margin-top: 100px;/* Creates a 100px space between the top edge of the page and the body content */    
+                padding: 0 200px;/* Applies 0 padding on top and bottom, and 200px padding on left and right to center the content */
+
+                color: aliceblue;/* Sets the text color to aliceblue, a soft light blue-white shade */
+                font-size: 17px;/* Defines the font size of all text within the body to 17 pixels */   
+
+
+                background-image: url(cleaninghands1.jpg);/* Uses an image 'cleaninghands1.jpg' from the /images directory as the background */
+                background-repeat: no-repeat;/* Prevents the background image from tiling or repeating across the element */
+                background-position: bottom; /* Aligns the background image to the bottom of the body element */
+                background-attachment: fixed; /* Keeps the background image stationary while scrolling the page content */
+                background-size: cover;    /* Stretches the background image to fully cover the body element */
+                
+                font-family: 'Segoe UI', 'Arial', sans-serif;/* Sets the preferred font to 'Segoe UI', with 'Arial' and sans-serif as fallbacks */
+            }
+            header{
+                text-align:center;
+                margin-bottom:40px;
+            }
+            nav {
+    
+                position: fixed;/* Locks the navigation bar in place at the top of the viewport, even when scrolling */    
+                font-family: 'Calibri', 'Segoe UI', 'Arial', sans-serif;/* Defines the font stack for navigation text, starting with 'Calibri' and falling back to 'Segoe UI', 'Arial', and sans-serif */
+                font-size: 23px;    /* Sets the font size of navigation text to 23 pixels for prominence */
+                font-weight: bold;/* Makes the navigation text bold for emphasis */
+                
+                top: 0;/* Positions the navigation bar exactly at the top edge of the viewport */
+                left: 0;/* Extends the navigation bar from the leftmost edge of the viewport */
+                right: 0; /* Extends the navigation bar to the rightmost edge of the viewport */
+                
+                background-color: rgba(255, 255, 255, 0.204);/* Applies a semi-transparent white background with 20.4% opacity for subtle contrast */
+    
+                display: flex;/* Arranges navigation items in a horizontal row using flexbox */
+                justify-content: center;/* Centers the navigation items horizontally within the bar */
+                align-items: center;/* Vertically aligns the navigation items to the middle of the bar */
+
+                padding: 0px;    /* Removes all padding from the navigation bar for a tight layout */
+                
+                z-index: 1000;/* Places the navigation bar above other elements with a high stacking order */
+            }
+
+            nav a {
+            
+                color: rgb(255, 255, 255); /* Colors all navigation links white for visibility against the background */
+                text-decoration: none;/* Removes the default underline from navigation links for a cleaner look */
+                
+                padding: 13px 30px;/* Adds 13px padding on top/bottom and 30px on left/right for clickable area spacing */
+                
+                transition: background-color 0.3s ease;/* Smoothly transitions the background color over 0.3 seconds when changed */
+                padding-right:15px;
+            }
+
+            nav a:hover {
+                
+                color: rgb(80, 229, 255);/* Changes the link color to a light cyan-blue when hovered over */
+                
+                text-decoration: none;/* Ensures no underline appears when hovering over the link */
+            }
+
+            nav a.active {
+                
+                background: rgba(0, 0, 0, 0.532);/* Applies a semi-transparent black background with 53.2% opacity to the active link */
+                font-weight: bolder;/* Increases the boldness of the active link text for distinction */
+            }
+ 
+
+            .logo {
+    
+                position: fixed;/* Fixes the logo in a stationary position relative to the viewport */
+                    
+                top: 0;/* Places the logo at the top edge of the viewport */
+                left: 0;/* Aligns the logo to the left edge of the viewport */
+                    
+                padding-left: 30px;/* Adds 30px of padding to the left of the logo for spacing from the edge */
+                padding-top: 5px;/* Adds 5px of padding above the logo for slight offset from the top */
+                    
+                width: 120px;/* Sets the logo image width to 120 pixels */   
+                height: auto;/* Automatically adjusts the logo height to maintain its aspect ratio */
+
+                z-index: 1001;/* Ensures the logo stays above other elements with a higher stacking order */
+            }
+            h1{
+                margin-bottom:10px;  /*Add space below the h1 heading*/
+                color:rgb(220, 238, 238);
+            }
+            h2{
+                font-size:30px;
+                font-weight:700;  /*Bold for emphasis*/
+                color:rgb(88, 241, 241);
+                margin-bottom:10px;  /*Space from text to border*/
+            }
+            h3{
+                font-size:20px;  /*Sizing the text*/
+                color:#eee;
+            }
+            section{
+                max-width:800px;  /*Limits the width*/
+                width:90%;
+                margin-bottom:40px;
+                padding:25px; /*Inner space inside the section*/
+                background-color:rgba(0, 0, 0, 0.564);  /*Semi transparent dark background*/
+                border-radius:15px;
+                box-shadow:0 4px 20px rgba(0,0,0,0.3);
+                color:#fff;  /*White text for readability*/
+            }
+            section h2{
+                font-size:28px;
+                border-bottom:2px solid aqua; /*Underline for emphasis*/
+                margin-bottom:15px;  /*Space between content and title*/
+                padding-bottom:10px;  /*Add space between text and border*/
+            }
+            p{
+                font-style:italic;
+                margin-bottom:20px;
+                line-height:1.6;  /*Improves readability with line spacing*/ 
+            }
+            .centered-links{
+                margin:20px;
+            }
+            .centered-links a{
+                display:flex;
+                margin:10px;  /*Space between links*/
+                padding:10px 15px;
+                background:rgba(58, 133, 158, 0.849);
+                color:#ffffff;
+                text-decoration:none;  /*No underline*/
+            }
+            .centered-links a:hover{
+                background-color:rgba(0,191,255,0.4);
+            }
+            :link{
+                text-decoration: none;/*Ensure links do not include decorations*/
+                color: rgb(95, 206, 225);
+            }
+
+            footer{
+                border-top-left-radius: 10px;  /*Rounds top-left corner*/
+                border-top-right-radius: 10px;  /*Rounds top-right corner*/
+            }
+        </style>
+    </head>
+    <body>
+
+        <!--navigation bar -->
+        <nav>
+            <a href="home.html"   class="active">Home</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="table.html">Table</a>
+            <a href="profile.html">Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="sitemap.html">Sitemap</a>
+            <a href="team.html">Team</a>
+            <a href="content_ST4.html">Content</a>
+        </nav>
+
+
+
+
+
+        <!--webpage logo-->
+        <div >
+            <a href="home.html"><img src="BlueSanctuary.PNG" alt="BlueSancuary logo" class="logo"></a>
+        </div> 
+
+        
+           
+
+
+            
+            <section>
+                 <h1>Student 4 - Osandi Pabasara</h1><br>
+                <h2>User Profile</h2>
+                
+                <!--Describes about the layout and styling techniques used-->
+                <h3><strong>Technical Description</strong></h3><br>
+
+                <p>"The layout uses flexbox for vertical stacking and center alignment and percentage based widths for responsiveness.The background images and circilar profile image enhance visual appeal.Sections are styled with semi-transparent background and shadows to create card-like blocks.The transform:scale(1.015) used in CSS on hover adds subtle interactivity.The timetable has styled with zebra striping and hover highlights.The SDG section uses clickable images.<br>
+                    The typography is clean and readable with the font that used in  body.The colour contrast is maintained throughout.The entire design forcuses on clarity, interactiviy and responsiveness.""
+                </p>
+
+            </section>
+
+            <section>
+                <!--Describes about the accessibility features of the profile page-->
+                <h3><strong>Accessibility</strong></h3><br>
+
+                <p>"HTML elements used here  improve screen reader navigation and page structure.The HTML elements used in form associated with inputs for better usability by assitive technologies.Placeholder text offers guidance without cluttering the UI and "Required" attribute on form fields ensure necessary data is entered.The site is also responsive via the viewport meta tag and flexible sizing, ensuring content remains accessible on all devices."</p>
+
+                <!--Nav links for the validation and profile pages-->
+                <div class="centered-links">
+                    <a href="https://validator.w3.org/">Link to the Validation page</a><br>
+                    <a href="profile.html">Link to the Page</a>
+                </div>
+            </section>
+
+
+            
+            <section>
+                <h2>Site Map</h2>
+                
+                <!--Describes the layout and styling of the site map-->
+                <h3><strong>Technical Description</strong></h3><br>
+
+                <p>"The sitemap page uses a combination of semantic HTML tags and scalable SVG graphics for a clean, interactive visual structure.Flexbox is applied for layout alignment,especially in the navigation bar and sitemap container.<br>
+                    The CSS includes hover transitions for visual feedback with soft pastel tones and shadow to ensure a modersn aesthetic.The navigation and footer include quick links for easy access to other pages and the page uses consistent color schemes,rounded elemnts and spacing for visual harmony and structure."
+                </p>
+            </section>
+
+                <section>
+                    
+                    <!--Describes the accessibility of the site map-->
+                    <h3><strong>Accessibility</strong></h3><br>
+
+                    <p>"Page ensures basic accessibility by using semantic tags to define structure,aiding screen reader navigation.All SVG nodes are wrapped in elements with descriptive text labels for keyboard and screen reader access.Text contrast is maintained with white or high-color elemts over dark background.However, the SVG itself may have limited accessibility .Adding forcus outlines and ensuring keyboard navigation for SVG links would further enhance accessibility compliance."</p>
+
+                    <div class="centered-links">
+                        <a href="https://validator.w3.org/">Link to the Validation page</a><br>
+                        <a href="sitemap.html">Link to the Page</a>
+                    </div>
+                </section>
+
+                
+                <section>
+                    <h2>Content Page</h2>
+                    
+                    <!--Describes the layout and styling of the content page-->
+                    <h3><strong>Technical Description</strong></h3><br>
+
+                    <p>"This page uses HTML5 elements combined with internal CSS to structure and style content about the global water crisis.Flexbox is used for navigation and footer layout,ensuring responsiveness.A fixed full-page background image enhance visual appeal, while navigation link and internal anchor linksenable smooth page navigation."</p>
+
+                    <!--Describes the accessibility of the content page-->
+                    <h3><strong>Accessibility</strong></h3><br>
+
+                    <p>"Navigation is keyboard-accessible with visible links.Text contrast is mostly sufficient and responsive design ensures usability across devices."</p>
+                    
+                    <div class="centered-links">
+                        <a href="https://validator.w3.org/">Link to the validation page</a><br>
+                        <a href="content_ST2.html">Link to the Page</a>
+                    </div>
+
+
+                </section>
+
+                <section>
+                    <h2><strong>Challenges And Lessons Learned</strong></h2><br>
+
+                    <p>"Challenges such as ensuring responsive design across devices , fixing broken links and navigation issues, managing styling conflicts and maintaining accessibility properly have learned throughout this."</p>
+                </section>
+
+                <section>
+                    <h2><strong>Compliance</strong></h2><br>
+
+                    <p>"The web page craeted follow key Janet regulation and best practices for responsible web publication."</p>
+
+                </section>
+
+                <section>
+                    <h2><strong>References</strong></h2><br>
+
+                    <p>"Have used provided links. For example<br>
+                        iStock (2025) iStock. Available at: https://www.istockphoto.com/" 
+                    </p>
+                </section>
+        
+            
+            
+            <footer style="background-color: #0000006d; color: white; text-align: center; padding: 20px 0; margin-top: 50px; font-size: 16px;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; padding-bottom: 20px;">
+                    <!-- Contact Info -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Contact Us</h3>
+                        <p>Email: <a href="mailto:info@bluesanctuary.org" style="color: rgb(255, 161, 246); text-decoration: none;">info@bluesanctuary.org</a></p>
+                        <p>Phone: +1 (800) 123-4567</p>
+                        <p>Address: 123 Blue Haven, Ocean City, WC 12345</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Quick Links</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><a href="html.html" style="color: white; text-decoration: none;">Home</a></li>
+                            <li><a href="volunteer.html" style="color: white; text-decoration: none;">Volunteer</a></li>
+                            <li><a href="feedback.html" style="color: white; text-decoration: none;">Feedback</a></li>
+                            <li><a href="sitemap.html" style="color: white; text-decoration: none;">Sitemap</a></li>
+                            <li><a href="profile.html" style="color:white;text-decoration:none;">User Profile</a></li>
+                            <li><a href="content_ST4.html" style="color:white;text-decoration:none;">Content 4</a></li>
+                        </ul>
+                    </div>
+                    <!-- Social Media -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Follow Us</h3>
+                        <p>
+                            <a href="https://twitter.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Twitter</a>
+                            <a href="https://facebook.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Facebook</a>
+                            <a href="https://instagram.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Instagram</a>
+                        </p>
+                    </div>
+                </div>
+                <hr style="border: 1px solid rgb(197, 197, 197); width: 80%; margin: 20px auto;">
+                <p style="color: rgb(197, 197, 197); font-size: 14px;">&copy; 2025 BlueSanctuary. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>
+    
