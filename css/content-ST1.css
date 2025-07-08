@@ -1,4 +1,4 @@
-
+/* Global body styling */
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
@@ -9,68 +9,89 @@ body {
   scroll-behavior: smooth;
   padding-top: 80px;
 }
-
+/*Styling the body*/
+body {
+  background-image: url('../Images/cleaninghands1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  font-family:'Poppins' , sans-serif;
+  color: white; 
+  text-align: center;
+  padding-top: 50px;
+}
+/* Styling for headings (h1, h2, h3) */
 h1, h2, h3 {
-  color: #0077b6;
+  color: hsl(199, 100%, 51%);
   margin-bottom: 10px;
 }
-
+/* Styling for paragraphs */
 p {
   margin-bottom: 15px;
 }
 
+.section-links{
+  background-color: hsl(0, 0%, 0%);
+  color: #002b46;
+}
+/* Styling for the section navigation bar */
 nav.section-links {
   position: fixed;
-  top: 60px; 
+  
+  top: 6px; 
   width: 100%;
-  background-color: #e0f7ff;
-  padding: 10px 20px;
+  background-color: #2ccaff;
   text-align: center;
-  font-size: 14px;
+
+  /* Ensure nav appears above other content */
   z-index: 999;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
+/* Styling for links in the section navigation */
 nav.section-links a {
   color: #005f73;
   text-decoration: none;
   margin: 0 10px;
 }
-
+/* Hover effect for section navigation links */
 nav.section-links a:hover {
+  color: #006670;
   text-decoration: underline;
 }
 
 /* Main Content */
 main.content-page {
   max-width: 1000px;
-  margin-top: 130px;
-  margin: 40px auto;
-  padding: 0 20px;
-  background-color: #ffffffd9;
+  padding: 100px 100px;
+  margin: 190px auto;
+  
+  background-color: #000000c1;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   padding-top: 10px;
 }
 
-/* Section Styling */
+/* Intro Styling */
 .intro {
   text-align: center;
   padding: 40px 0 20px;
   font-size: x-large;
   color: #002b46;
 }
-
+/* General styling for sections */
 section {
-  padding: 30px 0;
+  padding: 30px 0px;
   border-bottom: 1px solid #cce3f6;
+  text-align: left;
 }
-
+/* Remove border from the last section */
 section:last-of-type {
   border-bottom: none;
 }
 
-/* Highlighted Statistics (Optional) */
+/* Highlighted Statistics  */
 .stats {
   background-color: #e3f6f5;
   padding: 20px;
@@ -79,40 +100,46 @@ section:last-of-type {
   font-weight: bold;
   color: #003049;
 }
-
+/* Styling for the in-numbers section */
 .in-numbers {
   background-color: #f3f4f6;
   padding: 50px 20px;
   text-align: center;
-  
+
+ 
 }
+/* Styling for h2 in the in-numbers section */
 .in-numbers h2 {
   font-size: 3rem;
   color: #002b46;
   margin-bottom: 40px;
   
 }
+/* Styling for the numbers grid container */
 .numbers-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
 }
+/* Styling for individual statistic blocks */
 .stat-block {
   max-width: 250px;
 }
+/* Styling for large numbers in stat blocks */
 .big-number {
   font-size: 3rem;
   font-weight: bold;
   margin: 0;
 }
+/* Styling for stat titles */
 .stat-title {
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
+/* Color utility classes */
 .orange { color: #f25c05; }
 .red    { color: #d80032; }
 .blue   { color: #0077b6; }
@@ -126,22 +153,24 @@ a[href="#top"] {
   color: #006d77;
   text-decoration: none;
 }
-
+/* Hover effect for "Back to Top" link */
 a[href="#top"]:hover {
   text-decoration: underline;
 }
 
-/* Responsive */
+/* Responsive design for screens up to 768px  */
 @media (max-width: 768px) {
+  /* Stack navigation links vertically */
   nav a, nav.section-links a {
     display: block;
     margin: 10px 0;
   }
-
+/* Adjust padding for main content on smaller screens */
   main.content-page {
     padding: 10px;
   }
 }
+/* Styling for text-image row layout */
 .text-image-row {
   display: flex;
   flex-wrap: wrap;
@@ -149,12 +178,12 @@ a[href="#top"]:hover {
   align-items: flex-start;
   gap: 30px;
 }
-
+/* Styling for text content in text-image row */
 .text-content {
   flex: 1 1 60%;
   min-width: 300px;
 }
-
+/* Styling for images in section-image container */
 .section-image {
   flex: 1 1 35%;
   min-width: 250px;
@@ -162,18 +191,21 @@ a[href="#top"]:hover {
   justify-content: center;
 }
 
+/* Styling for images in section-image container */
 .section-image img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+/* Styling for the target image */
 .target-image {
   margin-top: -50px;
   margin-left: -15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+/* Styling for the top anchor */
 #top {
   position: relative;
   top: -80px;  
