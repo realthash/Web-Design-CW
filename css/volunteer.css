@@ -1,3 +1,4 @@
+/* Styling for the site footer */
 .site-footer {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(6px);
@@ -12,51 +13,74 @@
   justify-content: center;
   align-items: center;
 }
-
+/* Styling for links within the footer */
 footer a {
   color: #0066cc;
   text-decoration: none;
 }
-
+/* Hover effect for footer links */
 footer a:hover {
   text-decoration: underline;
 }
+.logo {
+    
+   position: fixed;/* Fixes the logo in a stationary position relative to the viewport */
+                    
+   top: 0;/* Places the logo at the top edge of the viewport */
+   left: 0;/* Aligns the logo to the left edge of the viewport */
+                    
+   padding-left: 30px;/* Adds 30px of padding to the left of the logo for spacing from the edge */
+   padding-top: 5px;/* Adds 5px of padding above the logo for slight offset from the top */
+                    
+   width: 120px;/* Sets the logo image width to 120 pixels */   
+   height: auto;/* Automatically adjusts the logo height to maintain its aspect ratio */
+
+   z-index: 1001;/* Ensures the logo stays above other elements with a higher stacking order */
+}
+/* Body styling for the page */
 body {
-  background-image: url("../images/volunteers.png");
+  background-image: url("https://raw.githubusercontent.com/realthash/Web-Design-CW/refs/heads/main/images/volunteers.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* Fix background to prevent scrolling */
   background-attachment: fixed;
+  /* Ensure body content is positioned relative to other elements */
   position: relative;
+  /* Set base stacking context */
   z-index: 0;
+
+/* Overlay for darkening the background */
 }
 body::before {
+  /* Empty content for pseudo-element */
   content: "";
+  /* Fixed position to cover the entire viewport */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);  /* You can adjust darkness */
+  background-color: rgba(0, 0, 0, 0.1); 
   z-index: -1;
 }
-
+/* Styling for the volunteer header section */
 .volunteer-header {
   text-align: center;
   margin: 30px auto;
 }
-
+/* Styling for h1 in the volunteer header */
 .volunteer-header h1 {
   font-size: 40px;
   color: #0a034d;
-  margin-bottom: 15px;
+  padding-top:40px ;
   font-family: 'Poppins', sans-serif; 
 }
-
+/* Styling for the sort dropdown container */
 .sort-dropdown {
-  color: #0a034d;
+  color: #f5f4f8;
 }
-
+/* Styling for the sort dropdown select element */
 .sort-dropdown select {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 8px 12px;
@@ -65,7 +89,7 @@ body::before {
   font-size: 14px;
   color: #0a034d;
 }
-
+/* Styling for the volunteer cards container */
 .volunteer-cards {
   display: flex;
   overflow-x: auto;
@@ -73,9 +97,10 @@ body::before {
   padding: 20px;
   scroll-snap-type: x mandatory;
 }
-
+/* Styling for individual volunteer cards */
 .card {
   flex: 0 0 300px;
+  /* Align cards to the start for scroll snapping */
   scroll-snap-align: start;
   border: 2px solid rgba(0, 170, 255, 0.4);
   border-radius: 16px;
@@ -85,7 +110,7 @@ body::before {
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   text-align: center;
 }
-
+/* Styling for images within cards */
 .card img {
   width: 100%;
   height: 160px;
@@ -93,21 +118,21 @@ body::before {
   border-radius: 10px;
   margin-bottom: 10px;
 }
-
+/* Styling for h3 headings in cards */
 .card h3 {
   font-size: 20px;
   color: #003366;
   margin-bottom: 10px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-
+/* Styling for paragraphs in cards */
 .card p {
   font-size: 14px;
   color: #333;
   margin-bottom: 15px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-
+/* Styling for buttons in cards */
 .card button {
   padding: 8px 14px;
   background-color: #0077cc;
@@ -117,34 +142,34 @@ body::before {
   cursor: pointer;
   transition: 0.3s ease;
 }
-
+/* Hover effect for card buttons */
 .card button:hover {
   background-color: #005fa3;
 }
-
+/* Styling for the reviews section */
 .reviews {
   margin: 40px 20px;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
 }
-
+/* Styling for the rating summary */
 .rating-summary {
   text-align: center;
   margin-bottom: 30px;
 }
-
+/* Styling for h2 in rating summary */
 .rating-summary h2 {
   font-size: 24px;
   color: #0077cc;
   margin-bottom: 5px;
 }
-
+/* Styling for paragraph in rating summary */
 .rating-summary p {
   font-size: 14px;
   color: #555;
 }
-
+/* Styling for the review list container */
 .review-list {
   display: flex;
   flex-direction: column;
@@ -152,7 +177,7 @@ body::before {
   max-width: 800px;
   margin: 0 auto;
 }
-
+/* Styling for individual review cards */
 .review-card {
   background-color: white;
   border-left: 5px solid #0077cc;
@@ -160,23 +185,24 @@ body::before {
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-
+/* Styling for h3 in review cards */
 .review-card h3 {
   margin: 0 0 10px;
   font-size: 16px;
   color: #333;
 }
-
+/* Styling for paragraphs in review cards */
 .review-card p {
   font-size: 14px;
   color: #444;
   margin: 0 0 10px;
 }
-
+/* Styling for spans in review cards */
 .review-card span {
   font-size: 12px;
   color: #777;
 }
+/* Styling for the feedback form section */
 .feedback-form {
   margin: 40px 20px;
   padding: 20px;
@@ -186,14 +212,14 @@ body::before {
   margin-left: auto;
   margin-right: auto;
 }
-
+/* Styling for h2 in feedback form */
 .feedback-form h2 {
   text-align: center;
   font-size: 24px;
   color: #0077cc;
   margin-bottom: 20px;
 }
-
+/* Styling for textarea in feedback form */
 .feedback-form textarea {
   width: 96%;
   height: 100px;
@@ -202,27 +228,27 @@ body::before {
   border-radius: 6px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
-  resize: vertical;
+  resize: vertical;/* Allow vertical resizing only */
 }
-
+/* Styling for the rating input container */
 .rating-input {
   text-align: center;
   font-size: 22px;
   color: #f4c542;
   margin-bottom: 20px;
 }
-
+/* Styling for individual star spans */
 .rating-input span {
   cursor: pointer;
   padding: 0 5px;
 }
-
+/* Styling for the feedback buttons container */
 .feedback-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-
+/* Styling for the primary feedback button */
 .feedback-buttons .primary {
   background-color: #0077cc;
   color: white;
@@ -233,11 +259,11 @@ body::before {
   font-size: 14px;
   transition: background-color 0.3s;
 }
-
+/* Hover effect for primary feedback button */
 .feedback-buttons .primary:hover {
   background-color: #005fa3;
 }
-
+/* Styling for the secondary feedback button */
 .feedback-buttons .secondary {
   background-color: #ccc;
   color: #333;
@@ -248,7 +274,7 @@ body::before {
   font-size: 14px;
   transition: background-color 0.3s;
 }
-
+/* Hover effect for secondary feedback button */
 .feedback-buttons .secondary:hover {
   background-color: #999;
 }

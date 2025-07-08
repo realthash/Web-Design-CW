@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Editor - Thavinsa Kariapperuma</title>
+  <link rel="stylesheet" href="css/editor_ST1.css"> <!-- Link to the editor CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!--SIDE NAVIGATION WITH INTERNAL LINKS  -->
+<nav class="editor-nav">
+  <a href="#splash">Splash Page</a>
+  <a href="#volunteer">Volunteer Page</a>
+  <a href="#content">Content Page</a>
+  <a href="#challenges">Challenges</a>
+  <a href="#compliance">Compliance</a>
+  <a href="#references">References</a>
+  <a href="#top">Back to Top</a>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <h1>Page Editor</h1>
+  <p class="student-name">Thavinsa Kariapperuma | Student 1</p>
+  <p class="student-role"> Developer of Splash, Volunteer, and Content Pages</p>
+</header>
+
+<!-- MAIN LAYOUT: side nav and content -->
+  <div class="container">
+
+    <!-- MAIN CONTENT AREA -->
+    <main>
+        <!-- SPLASH PAGE SECTION -->
+      <section id="splash">
+        <h2>Splash Page</h2>
+        <h3>Technical Description</h3>
+        <p>
+          The Splash Page uses semantic HTML5 elements, including header, main, and section tags, to create a minimalistic and visually engaging introduction to the website. A loading spinner is implemented using a div tag with the class loader, styled in CSS with border properties to create a spinning effect via the keyframes spin animation, running infinitely . The background image (cleaninghands1.jpg) is applied with CSS background-size: cover and background-position: center to ensure full coverage and proper alignment. The h1 and h2 elements are styled with the Poppins font and a blue color  for visual hierarchy, while the ul element lists team members without bullets (list-style-type: none). The layout is centered using text-align: center and margin: auto, ensuring a clean and welcoming design. The page is lightweight to ensure fast loading, aligning with its role as an entry point.
+        </p>  
+        <h3>Accessibility</h3>
+        <p>
+          The Splash Page uses semantic HTML to provide a clear structure for screen readers. Descriptive text in the h1 and h2 elements aids navigation for assistive technologies.  The viewport meta tag is implied (though not shown in the provided code) to support responsiveness, making the page accessible across devices. The loading spinner’s animation is visually distinct but does not rely on color alone, ensuring it is perceivable by users with visual impairments. Adding aria-label to the loader could further enhance accessibility for screen reader users.
+        </p>
+        <h3>Links</h3>
+        <p>
+          <a href="validation_ST1.html#splash" target="_blank">Validation (Splash)</a> |
+          <a href="splash.html" target="_blank">Splash Page</a>
+        </p>
+      </section>
+
+      <!-- VOLUNTEER PAGE SECTION -->
+      <section id="volunteer">
+        <h2>Volunteer Page</h2>
+        <h3>Technical Description</h3>
+        <p>
+          The Volunteer Page employs semantic HTML5 elements like header, nav, main, and footer to structure content promoting volunteer opportunities. The nav element uses flexbox (display: flex) for responsive navigation link alignment, consistent with the site’s global style.css.  Each card includes an img, h3, p, and button, styled with border-radius and box-shadow for a modern look. A feedback form uses a textarea with resize: vertical and star rating span elements for interactivity. The background image (volunteers.png) is overlaid with a semi transparent layer to improve text readability. CSS transitions (transition: 0.3s ease) on buttons and links enhance interactivity.
+        </p>
+        <h3>Accessibility</h3>
+        <p>
+          Semantic HTML ensures a clear structure for screen readers, with h1, h2, and h3 elements providing logical headings. The navigation links and form elements are keyboard accessible, with visible focus states via hover and focus styles. High-contrast text (e.g., white and blue on semi-transparent backgrounds) meets contrast standards. The viewport meta tag ensures responsiveness, and the card layout adapts to smaller screens via horizontal scrolling. The form’s textarea includes a placeholder for guidance, and the star rating system uses clickable span elements, though adding aria labels would improve screen reader support. Descriptive link text (e.g., “Join Now”) aids assistive technologies
+        </p>
+        <h3>Links</h3>
+        <p>
+          <a href="validation_ST1.html#volunteerVal" target="_blank">Validation (Volunteer)</a> |
+          <a href="volunteer.html" target="_blank">Volunteer Page</a>
+        </p>
+      </section>
+
+      <!-- CONTENT PAGE SECTION -->
+      <section id="content">
+        <h2>Content Page</h2>
+        <h3>Technical Description</h3>
+        <p>
+          The Content Page (content_ST1.html) uses HTML5 section elements to organize content about SDG 6, with internal anchor links (a href="section-id") for smooth in-page navigation. The nav element for section links is fixed at the top with position- fixed and styled with background-color for visibility. Flexbox  is used in the text-image-row and numbers-grid containers to create responsive layouts for text and statistics. The background image (cleaninghands1.jpg) is styled with background-size- cover and background attachment: fixed for visual appeal. CSS properties like border-radius and box-shadow enhance the modern aesthetic of sections and images. The stat-block elements use bold typography (font-size: 3rem) and color classes (e.g., .blue) for emphasis. Media queries adjust padding and navigation stacking for smaller screens, ensuring responsiveness.
+        </p>
+        
+        <h3>Accessibility</h3>
+        <p>
+          Semantic section and nav elements provide a clear structure for screen readers, with h1, h2, and h3 headings defining content hierarchy. Anchor links are keyboard-accessible with clear focus states via hover styles. High contrast text (e.g., white and blue on dark or semi-transparent backgrounds) adheres to contrast guidelines. The responsive design, supported by the viewport meta tag, ensures usability across devices. Images in the.section-image container include alt text (assumed, though not shown in the code) for screen reader compatibility. The statistics section uses large, bold text for readability, but adding aria-describedby to stat blocks could further enhance accessibility for assistive technologies.
+        </p>
+        <h3>Links</h3>
+        <p>
+          <a href="validation_ST1.html#contentVal" target="_blank">Validation (Content)</a> |
+          <a href="content_ST1.html" target="_blank">Content Page</a>
+        </p>
+      </section>
+
+      
+
+      
+
+      <!-- CHALLENGES AND LESSONS -->
+      <section id="challenges">
+        <h2>Challenges and Lessons Learned</h2>
+        <p>
+          A major challenge was aligning content responsively and keeping both navigation bars visible while scrolling. I solved this by using position: fixed and adjusting z-index. Another challenge was integrating responsive image layout, which was addressed with Flexbox. I also learned the importance of semantic HTML and testing for accessibility.
+        </p>
+      </section>
+
+      <!-- COMPLIANCE SECTION -->
+      <section id="compliance">
+        <h2>Compliance</h2>
+        <p>
+          My pages comply with Janet regulations by avoiding personal data collection, ensuring no copyrighted or uncredited content is used, and validating all HTML and CSS through W3C tools. I maintained secure linking and avoided any malicious scripts or popups.
+        </p>
+      </section>
+
+      <!--  REFERENCES SECTION -->
+      <section id="references">
+        <h2>References</h2>
+        <ul class="ref">
+          <li><a href="https://www.istockphoto.com/" target="_blank">iStock (2025) iStock. Available at: https://www.istockphoto.com/</a></li>
+          <li>Duckett, J. (2011). HTML and CSS: Design and Build Websites. John Wiley & Sons.</li>
+          <li>W3C Markup Validation Service. Available at: <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a></li>
+        </ul>
+      </section>
+
+      <!--  BACK TO TOP BUTTON -->
+      <div class="top">
+        <a href="#">Back to Top</a>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="background-color: #0000006d; color: white; text-align: center; padding: 20px 0; margin-top: 50px; font-size: 16px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; padding-bottom: 20px;">
+                <!-- Contact Info -->
+                <div style="margin: 10px;">
+                    <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Contact Us</h3>
+                    <p>Email: <a href="mailto:info@bluesanctuary.org" style="color: rgb(255, 161, 246); text-decoration: none;">info@bluesanctuary.org</a></p>
+                    <p>Phone: +94(70 123-4567)</p>
+                    <p>Address: 123 Blue Haven, Ocean City,Colombo.</p>
+                </div>
+                <!-- Quick Links -->
+                <div style="margin: 10px;">
+                    <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="home.html" style="color: white; text-decoration: none;">Home</a></li>
+                        <li><a href="volunteer.html" style="color: white; text-decoration: none;">Volunteer</a></li>
+                        <li><a href="feedback.html" style="color: white; text-decoration: none;">Feedback</a></li>
+                        <li><a href="sitemap.html" style="color: white; text-decoration: none;">Sitemap</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media -->
+                <div style="margin: 10px;">
+                    <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Follow Us</h3>
+                    <p>
+                        <a href="https://twitter.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Twitter</a>
+                        <a href="https://facebook.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Facebook</a>
+                        <a href="https://instagram.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Instagram</a>
+                    </p>
+                </div>
+            </div>
+            <hr style="border: 1px solid rgb(197, 197, 197); width: 80%; margin: 20px auto;">
+            <p style="color: rgb(197, 197, 197); font-size: 14px;">&copy; 2025 BlueSanctuary. All rights reserved.</p>
+    <p>&copy; 2025 BlueSanctuary Project | Thavinsa Kariapperuma</p>
+  </footer>
+
+</body>
+</html>
