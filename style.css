@@ -29,7 +29,8 @@ nav {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    
+    flex-wrap: wrap; /* Allows the navbar to wrap items on smaller screens */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     position: fixed; /* Fix navbar to top */
     top: 0;
