@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/png" href="BlueSanctuaryIcon.PNG">
+        <title>BlueSanctuary </title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+    
+                margin-top: 100px;/* Creates a 100px space between the top edge of the page and the body content */    
+                padding-left:250px;/* Applies 0 padding on top and bottom, and 200px padding on left and right to center the content */
+                padding-right:200px;
+
+                color: aliceblue;/* Sets the text color to aliceblue, a soft light blue-white shade */
+                font-size: 17px;/* Defines the font size of all text within the body to 17 pixels */   
+
+
+                background-image: url(cleaninghands1.jpg);/* Uses an image 'cleaninghands1.jpg' from the /images directory as the background */
+                background-repeat: no-repeat;/* Prevents the background image from tiling or repeating across the element */
+                background-position: bottom; /* Aligns the background image to the bottom of the body element */
+                background-attachment: fixed; /* Keeps the background image stationary while scrolling the page content */
+                background-size: cover;    /* Stretches the background image to fully cover the body element */
+                
+                font-family: 'Segoe UI', 'Arial', sans-serif;/* Sets the preferred font to 'Segoe UI', with 'Arial' and sans-serif as fallbacks */
+            }
+            header{
+                margin-bottom:40px;
+                color:#00f2fe;
+            }
+
+            .bottom-bar{
+                position:fixed;
+                top:110px;
+                left:0;
+                width:160px;
+                background-color:rgba(28, 27, 27, 0.804);
+                padding:10px;
+                display:flex;
+                flex-direction:column;
+                align-items:flex-start;
+                z-index:1000;
+            }
+            .bottom-bar a{
+                margin:0;
+                color:white;
+                font-weight:bold;
+                padding-left:5px;
+                width:100%;
+                display:block;
+                text-align:left;
+            
+            }
+             .logo {
+    
+                position: fixed;/* Fixes the logo in a stationary position relative to the viewport */
+                
+                top: 0;/* Places the logo at the top edge of the viewport */
+                left: 0;/* Aligns the logo to the left edge of the viewport */
+    
+                padding-left: 30px;/* Adds 30px of padding to the left of the logo for spacing from the edge */
+                padding-top: 5px;/* Adds 5px of padding above the logo for slight offset from the top */
+                
+                width: 120px;/* Sets the logo image width to 120 pixels */   
+                height: auto;/* Automatically adjusts the logo height to maintain its aspect ratio */
+
+                z-index: 1001;/* Ensures the logo stays above other elements with a higher stacking order */
+            }
+            section{
+                max-width:800px; /*Limits the section's minimum width*/
+                width:90%;
+                margin-bottom:40px; /*Add space netween each section*/
+                padding:25px;  /*Add space inside the section*/
+                align-items:center;
+                background-color:rgba(26, 24, 24, 0.753);  /*Add semi transparent dark background*/
+                border-radius:15px;
+                box-shadow:0 4px 20px rgba(0,0,0,0.3);  /*Add subtle shadow for depth*/
+                color:#fff;
+            }
+            h1{
+                color:aqua;
+                margin-bottom:10px;
+                font-size:30px;
+                text-align:center;
+
+            }
+            h2{
+                font-size:25px;
+                font-weight:700;  /*Bold for emphasis*/
+                color:rgb(100, 167, 221);
+                margin-bottom:10px; /*Space from text to border*/
+                border:none;
+                border-bottom: 2px solid #3498db;
+
+                 
+            }
+            p {
+                padding-bottom: 20px;
+                line-height: 1.6;
+            }
+            ul,ol{
+                margin-left:20px;
+            }
+            ol li{
+                margin-bottom:15px;
+                padding-left:10px;
+            }
+            ol li::marker {
+                color: #dfe6e7f5; /* Custom marker color */
+                font-weight: bold;
+            }
+            ul li{
+                margin:10px 0;
+            }
+            .image-container{
+                display:flex;
+                margin-top:30px;
+                align-items:center;
+                justify-content:center;
+                
+            }
+            .image-container img{
+                max-width:400px;
+                width:30%;
+                height:auto;
+                display:flex;
+                transition:transform 0.3s ease;
+                box-shadow:0 0 10px rgba(255,255,255,0.2);
+            }
+            .top-button{
+                display:block;
+                margin:40px auto;
+                padding:12px 24px;
+                font-weight:bold;
+                border-radius:30px;
+                width:160px;
+                text-decoration:none;
+                text-align:center;
+                background-color:#1f1e1ea2;
+                color:white;
+            }
+            .top-button:hover{
+                transform:translateY(-5px);
+                box-shadow:0 5px 20px rgba(224, 240, 241, 0.715);
+            }
+            .link-container{
+                margin:20px;
+            }
+            .link-container a{
+                display:flex;
+                margin:10px;  /*Space between links*/
+                padding:10px 15px;
+                background:rgba(58, 133, 158, 0.849);
+                color:#ffffff;
+                text-decoration:none;  /*No underline*/
+            }
+            .link-container a:hover{
+                background-color:rgba(0,191,255,0.4);
+            }
+            :link{
+                text-decoration: none;/*Ensure links do not include decorations*/
+                color: rgb(95, 206, 225);
+            }
+
+            footer{
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+        </style>
+    </head>
+    <body id="top">
+
+        <!--navigation bar -->
+        <nav>
+            <a href="home.html"   class="active">Home</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="table.html">Table</a>
+            <a href="profile.html">Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="sitemap.html">Sitemap</a>
+            <a href="team.html">Team</a>
+            <a href="content_ST4.html">Content</a>
+        </nav>
+
+
+
+
+
+       <!--webpage logo-->
+        <div >
+            <a href="home.html"><img src="BlueSanctuary.PNG" alt="BlueSancuary logo" class="logo"></a>
+        </div> 
+
+
+        <!--navigarion bar-->
+        <nav class="bottom-bar">
+            <a href="#causes" onclick="showSection('causes')">Causes</a>
+            <a href="#impact" onclick="showSection('impact')">Impacts</a>
+            <a href="#regions" onclick="showSection('regions')">Affected Regions</a>
+            <a href="#solutions" onclick="showSection('solutions')">Solutions</a>
+        </nav>
+
+        
+        <!--=====CAUSES SECTION=====-->
+        <section id="causes">
+            <h1>Global Water Crisis and Sanitation </h1>
+
+            <header>
+                <h2><strong>Causes of the Global Water Crisis and Sanitation</strong></h2>
+            </header>
+            <p>The crisis stems from a convergence of environmental, human abnd systemic factors:</p>
+            
+            <ol>
+                <li><strong>Physical Water Scarsity</strong>
+                    <ul>
+                        <li><strong>Limited Freshwater Availability:</strong>
+                            <p>Only 3% of the Earth's water is freshwater and two thirds of that ia locked in glaciers or otherwise unavailable. This leaves just 0.3% of global water accessible for human use.</p>
+                            <div class="image-container">
+                                <img src="image3.jpg" alt="image3">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><strong>Climate Change</strong>
+                    <p>Risisng global temperature disrupt the hydrological cycle, leading to unpredictable rainfall, prolonged droughts and increased flooding.</p>
+                    <ul>
+                        <li>In 2023, global rivers experienced the driest conditions in over 30 years, with record-low water levels in the Amazon and Mississippi basins.</li>
+                        <li>Glaciers lost over 600 gigatonnes of water in 2022-2023, the largest mass loss in 50 years, impacting water supplies in regions like the Himalayas and Andes.</li>
+                    </ul>
+                </li>
+            
+
+                <li><strong>Economic Water Scarcity</strong>
+                    <ul>    
+                        <li><strong>Lack of Infrastructure</strong></li>
+
+                        <li><strong>Poor Management</strong></li>
+                    </ul>
+                </li>
+
+                <li><strong>Water Pollution</strong>
+                    <ul>
+                        <li>Pollution from industry, sewage and agriculture introduces harmful substances into water sources, reducing both water quality and availability.Over 80% of global wastewater is released into water bodies untreated.</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Population growth and Urbanization</strong>
+                    <ul>
+                        <li>Rapid urbanization increases demand while overwheling water and sanitation systems.</li>
+                        <li>Informal settlements often lack basic sanitation facilities.</li>
+                    </ul>
+                </li>
+                    
+            </ol>
+            <div class="image-container">
+                <img src="Globalwarming.jpg" alt="Globalwarming">
+            </div>
+        </section>
+
+
+        <!--====iMAPACTS SECTION=====-->
+        <section id="impact">
+            <header>
+                <h2>Impacts of Global Water Crisis and Sanitation</h2>
+            </header>
+
+            <ol>
+                <li><strong>Health Hazards</strong>
+                    <ul>
+                        <li>Over 2 billion people consume unsafe drinking water.Waterborn diseases like;
+                            <ul>
+                                <li>Cholera</li>
+                                <li>Dysentery</li>
+                                <li>Typhoid</li>
+                            </ul>
+                            claim thousands of lives daily, especially among children.
+                        </li>
+                    </ul>
+                </li>
+
+                <li><strong>Economic Consequences</strong>
+                    <p>Lack of acccess to water and sanitation reduces productivity, increases healthcare costs and hampers education. Women and girls are disproportionately affected, often walking long distances for water and lacking safe sanitation facilities.</p>
+                </li>
+            </ol>
+
+            <div class="image-container">
+                <img src="image9.jpg" alt="image9">
+            </div>
+
+            <div class="link-container">
+                <a href="https://www.solidarites.org/en/taking-aid-further/combatting-waterborne-diseases/?msclkid=9268712737e41ce73a3c1945a497f582" target="blank">Learn More</a>
+            </div>
+        </section>
+        
+
+        <!---===AFFECTED REGIONS SECTION===-->
+        <section id="regions">
+
+            <header>
+                <h2>Affected Regions</h2>
+            </header>
+            <ol>
+                <li><strong>Sub-Saharan Africa</strong>
+                    <ul>
+                        <li>Over 400 million people lack access to clean drinking water.</li>
+                        <li>Infrastructure gaps, droughts and poverty worsen the crisis.</li>
+                    </ul>
+                </li>
+                <li><strong>South Asia</strong>
+                    <ul>
+                        <li>Countries like India, Pakistan and Bangladesh face severe groundwater depletion and pollution.</li>
+                        <li>Poor sanitation in rural and urban slums remain a major health risk.</li>
+                    </ul>
+                </li>
+                <li><strong>Middle East and North Africa(MENA)</strong>
+                    <ul>
+                        <li>The world's most water-scarce region, heavily dependent on desalination and imports.</li>
+                        <li>Climate change is intensifying regional water conflicts.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+
+        <!--===SOLUTIONS SECTIONS===-->
+        <section id="solutions">
+            <header>
+                <h2>Solutions & Recommendations</h2>
+            </header>
+
+            <ol>
+                <li><strong>Investment in Infrastructure</strong></li>
+                <li><strong>Pollution Control</strong></li>
+                <li><strong>Policy and Global Cooperation</strong>
+                    <ul>
+                        <li>Implement integrated water resources management(WRM).</li>
+                        <li>Support global goals like UN Sustainable Development Goal 6:<i>Clean Water and Sanitation for All.</i></li>
+                    </ul>
+                </li>
+            </ol>
+
+            <!--Image-->
+            <div class="image-container">
+                <img src="OIP.jpg" alt="OIP">
+            </div>
+
+        </section>
+
+        
+
+
+
+
+
+        <a href="#top" class="top-button">Go to Top</a>
+
+
+        <footer style="background-color: #0000006d; color: white; text-align: center; padding: 20px 0; margin-top: 50px; font-size: 16px;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; padding-bottom: 20px;">
+                    <!-- Contact Info -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Contact Us</h3>
+                        <p>Email: <a href="mailto:info@bluesanctuary.org" style="color: rgb(255, 161, 246); text-decoration: none;">info@bluesanctuary.org</a></p>
+                        <p>Phone: +94701234567</p>
+                        <p>Address: 123 Blue Haven, Ocean City, Colombo 12345</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Quick Links</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><a href="home.html" style="color: white; text-decoration: none;">Home</a></li>
+                            <li><a href="volunteer.html" style="color: white; text-decoration: none;">Volunteer</a></li>
+                            <li><a href="feedback.html" style="color: white; text-decoration: none;">Feedback</a></li>
+                            <li><a href="sitemap.html" style="color: white; text-decoration: none;">Sitemap</a></li>
+                            <li><a href="profile.html" style="color:white; text-decoration:none;">User Profile</a></li>
+                            <li><a href="content_ST4.html" style="color:white; text-decoration:none;">Content 4</a></li>
+                        </ul>
+                    </div>
+                    <!-- Social Media -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Follow Us</h3>
+                        <p>
+                            <a href="https://twitter.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Twitter</a>
+                            <a href="https://facebook.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Facebook</a>
+                            <a href="https://instagram.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Instagram</a>
+                        </p>
+                    </div>
+                </div>
+                <hr style="border: 1px solid rgb(197, 197, 197); width: 80%; margin: 20px auto;">
+                <p style="color: rgb(197, 197, 197); font-size: 14px;">&copy; 2025 BlueSanctuary. All rights reserved.</p>
+                <a href="editor_4.html">Page Editor</a>
+            </div>
+        </footer>
+
+
+    </body>
+</html>
