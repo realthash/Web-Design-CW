@@ -1,63 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="icon" type="png" href="/images/BlueSanctuaryIcon.PNG">
+        <link rel="icon" type="image/PNG" href="https://raw.githubusercontent.com/realthash/Web-Design-CW/refs/heads/main/images/BlueSanctuaryIcon.PNG">
         <title>BlueSanctuary </title>
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             /* Global styles */
-            body{
-                margin:0;
-                padding:0;
+            body {
+    
+                margin-top: 100px;/* Creates a 100px space between the top edge of the page and the body content */    
+                padding: 0 200px;/* Applies 0 padding on top and bottom, and 200px padding on left and right to center the content */
 
-                background:url('/images/cleaninghands1.jpg')no-repeat center center fixed;
-                background-size:cover;
-                color:#333;
-                display:flex;
-                flex-direction:column;
-                min-height:100vh;
+                color: aliceblue;/* Sets the text color to aliceblue, a soft light blue-white shade */
+                font-size: 17px;/* Defines the font size of all text within the body to 17 pixels */   
+
+
+                background-image: url(cleaninghands1.jpg);/* Uses an image 'cleaninghands1.jpg' from the /images directory as the background */
+                background-repeat: no-repeat;/* Prevents the background image from tiling or repeating across the element */
+                background-position: bottom; /* Aligns the background image to the bottom of the body element */
+                background-attachment: fixed; /* Keeps the background image stationary while scrolling the page content */
+                background-size: cover;    /* Stretches the background image to fully cover the body element */
+                
+                font-family: 'Segoe UI', 'Arial', sans-serif;/* Sets the preferred font to 'Segoe UI', with 'Arial' and sans-serif as fallbacks */
+            }
+
+            section{
+                max-width:800px; /*Limits the section's minimum width*/
+                width:90%;
+                margin-bottom:40px; /*Add space netween each section*/
+                padding:25px;  /*Add space inside the section*/
+                align-items:center;
+                background-color:rgba(26, 24, 24, 0.753);  /*Add semi transparent dark background*/
+                border-radius:15px;
+                box-shadow:0 4px 20px rgba(0,0,0,0.3);  /*Add subtle shadow for depth*/
+                color:#fff;
             }
             header{
 
-                background:#004d40;
+                background:#004d40;  /*Deep teal background*/
                 color:white;
-                padding:1rem;
-                text-align:center;
+                padding:1rem;  /*Provides vertical space*/
+                text-align:center;  /*Center all inline text*/
                 box-shadow:0 4px 6px rgba(0,0,0,0.1);
             }
-
             h1{
                 text-align:center;
-                margin-top:80px;
+                margin-top:20px;  /*Add space above the heading*/
                 color:#6ba6c7;
                 font-size:2.2rem;
             }
+            
+            
+            p{
+                font-style:italic;
+                margin-bottom:20px;  /*Add vertical space*/
+                line-height:1.6;  /*Improves readability with line spacing*/ 
+            }
             .sitemap-container{
-                width:100%;
-                overflow-x:auto;
+                width:100%; /*Stretches full width*/
                 display:flex;
                 justify-content:center;
                 align-items:center;
                 text-align:center;
             }
             svg{
-                width:auto;
+                width:100%;
                 height:auto;
             }
             .node{
                 fill:#4bbec6;
                 stroke:#064f58;
                 stroke-width:2;
-                rx:10;
-                ry:10;
-                transition:fill 0.3s,transform 0.2s;
-                cursor:pointer;
-            }
-            .node:hover{
-                fill:#00acc1;
-                transform:scale(1.05);
             }
             text{
                 font-size:14px;
@@ -66,16 +81,30 @@
                 text-anchor:middle;
                 text-decoration:none;
             }
-            .footer{
-                background-color:#b8e1db9e;
-                color:#fff;
-                padding:20px 0;
-                text-align:center;
-                font-size:16px;
+            .logo {
+    
+                position: fixed;/* Fixes the logo in a stationary position relative to the viewport */
+                
+                top: 0;/* Places the logo at the top edge of the viewport */
+                left: 0;/* Aligns the logo to the left edge of the viewport */
+                
+                padding-left: 30px;/* Adds 30px of padding to the left of the logo for spacing from the edge */
+                padding-top: 5px;/* Adds 5px of padding above the logo for slight offset from the top */
+                
+                width: 120px;/* Sets the logo image width to 120 pixels */   
+                height: auto;/* Automatically adjusts the logo height to maintain its aspect ratio */
+
+                z-index: 1001;/* Ensures the logo stays above other elements with a higher stacking order */
             }
-            .footer a{
-                color:#094f88d8;
-                font-weight:bold;
+
+            :link{
+                text-decoration: none;/*Ensure links do not include decorations*/
+                color: rgb(95, 206, 225);
+            }
+
+            footer{
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
             }
         </style>
     </head>
@@ -83,14 +112,15 @@
 
         <!--navigation bar -->
         <nav>
-            <a href="home.html"   class="active">Home</a>
+
+            <a href="home.html">Home</a>
             <a href="volunteer.html">Volunteer</a>
             <a href="table.html">Table</a>
             <a href="profile.html">Profile</a>
             <a href="feedback.html">Feedback</a>
-            <a href="sitemap.html">Sitemap</a>
+            <a href="sitemap.html" class="active">Sitemap</a>
             <a href="team.html">Team</a>
-            <a href="content_ST2.html">Content</a>
+            <a href="content_ST4.html">Content</a>
         </nav>
 
 
@@ -99,118 +129,92 @@
 
         <!--webpage logo-->
         <div class="logo-container" >
-            <a href="home.html"><img src="D:/Osandi/Sem_2/Web_designing/CW/Web-Design-CW/Web-Design-CW/images/BlueSanctuary.PNG" alt="BlueSancuary logo" class="logo"></a>
+            <a href="home.html"><img src="BlueSanctuary.PNG" alt="BlueSancuary logo" class="logo"></a>
         </div> 
 
-        <h1>Site Map</h1>
 
-         <div class="sitemap-container">
-            <svg viewbox="0 0 1600 800">
-                <a href="home.html">
-                    <rect class="node" x="680" y="20" width="120" height="40" rx="10" ry="10"></rect>
-                    <text x="740" y="40">Home</text>
-                </a>
-                <a href="volunteer.html">
-                    <rect class="node" x="260" y="140" width="120" height="40"></rect>
-                    <text x="320" y="160">Volunteer</text>
-                </a>
-                <a href="table.html">
-                    <rect class="node" x="400" y="140" width="120" height="40"></rect>
-                    <text x="460" y="160">Table</text>
-                </a>
-                <a href="profile.html">
-                    <rect class="node" x="540" y="140" width="120" height="40"></rect>
-                    <text x="600" y="160">Profile</text>
-                </a>
-                <a href="feedback.html">
-                    <rect class="node" x="680" y="140" width="120" height="40"></rect>
-                    <text x="740" y="160">Feedback</text>
-                </a>
-                <a href="sitemap.html">
-                    <rect class="node" x="820" y="140" width="120" height="40"></rect>
-                    <text x="880" y="160">Sitemap</text>
-                </a>
-                <a href="page_editor.html">
-                    <rect class="node" x="820" y="260" width="120" height="40"></rect>
-                    <text x="880" y="280">Page Editor</text>
-                </a>
-                <a href="editor_1.html">
-                    <rect class="node" x="680" y="320" width="120" height="40"></rect>
-                    <text x="740" y="340">Student 1</text>
-                </a>
-                <a href="editor_2.html">
-                    <rect class="node" x="680" y="420" width="120" height="40"></rect>
-                    <text x="740" y="440">Student 2</text>
-                </a>
-                <a href="editor_3.html">
-                    <rect class="node" x="680" y="520" width="120" height="40"></rect>
-                    <text x="740" y="540">Student 3</text>
-                </a>
-                <a href="editor_4.html">
-                    <rect class="node" x="680" y="620" width="120" height="40"></rect>
-                    <text x="740" y="640">Student 4</text>
-                </a>
-                <a href="team.html">
-                    <rect class="node" x="960" y="140" width="120" height="40"></rect>
-                    <text x="1020" y="160">Team</text>
-                </a>
-                <a href="content_ST2.html">
-                    <rect class="node" x="1100" y="140" width="120" height="40"></rect>
-                    <text x="1160" y="160">Content</text>
-                </a>
-                <a href="student_1.html">
-                    <rect class="node" x="1240" y="240" width="120" height="40"></rect>
-                    <text x="1300" y="260">Content 1</text>
-                </a>
-                <a href="student_2.html">
-                    <rect class="node" x="1240" y="340" width="120" height="40"></rect>
-                    <text x="1300" y="360">Content 2</text>
-                </a>
-                <a href="student_3.html">
-                    <rect class="node" x="1240" y="440" width="120" height="40"></rect>
-                    <text x="1300" y="460">Content 3</text>
-                </a>
-                <a href="student_4.html">
-                    <rect class="node" x="1240" y="540" width="120" height="40"></rect>
-                    <text x="1300" y="560">Content 4</text>
-                </a>
+        <section>
+            <h1>Site Map</h1>
 
-                <!--Connecting Lines-->
-                <line x1="1160" y1="100" x2="300" y2="100" stroke="#00ffff" stroke-width="3" />
-                <line x1="1160" y1="100" x2="1160" y2="140" stroke="#00ffff" stroke-width="3" />
-                <line x1="1020" y1="100" x2="1020" y2="140" stroke="#00ffff" stroke-width="3" />
-                <line x1="880" y1="100" x2="880" y2="140" stroke="#00ffff" stroke-width="3" />
-                <line x1="740" y1="100" x2="740" y2="140" stroke="#00ffff" stroke-width="3" />
-                <line x1="740" y1="100" x2="740" y2="60" stroke="#00ffff" stroke-width="3" />
-                <line x1="600" y1="100" x2="600" y2="140" stroke="#00ffff" stroke-width="3" />
-                <line x1="460" y1="100" x2="460" y2="140" stroke="#00ffff" stroke-width="3" />
-                <line x1="300" y1="100" x2="300" y2="140" stroke="#00ffff" stroke-width="3" />
-                <line x1="1160" y1="180" x2="1160" y2="560" stroke="#00ffff" stroke-width="3" />
-                <line x1="1160" y1="560" x2="1240" y2="560" stroke="#00ffff" stroke-width="3" />
-                <line x1="1160" y1="460" x2="1240" y2="460" stroke="#00ffff" stroke-width="3" />
-                <line x1="1160" y1="360" x2="1240" y2="360" stroke="#00ffff" stroke-width="3" />
-                <line x1="1160" y1="260" x2="1240" y2="260" stroke="#00ffff" stroke-width="3" />
-                <line x1="880" y1="300" x2="880" y2="640" stroke="#00ffff" stroke-width="3" />
-                <line x1="880" y1="640" x2="800" y2="640" stroke="#00ffff" stroke-width="3" />
-                <line x1="880" y1="540" x2="800" y2="540" stroke="#00ffff" stroke-width="3" />
-                <line x1="880" y1="440" x2="800" y2="440" stroke="#00ffff" stroke-width="3" />
-                <line x1="880" y1="440" x2="800" y2="440" stroke="#00ffff" stroke-width="3" />
-                <line x1="880" y1="340" x2="800" y2="340" stroke="#00ffff" stroke-width="3" />
-                <line x1="880" y1="260" x2="880" y2="180" stroke="#00ffff" stroke-width="3" /> 
-
-                
+            <!--Container to center the sitemap SVG-->
+            <div class="sitemap-container">
+                <!--SVG elements for visual site map layout-->
+                <svg viewBox="0 0 1300 800">
+                    <a href="home.html">
+                        <rect class="node" x="520" y="20" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="590" y="45">Home</text>
+                    </a>
+                    <a href="table.html">
+                        <rect class="node" x="80" y="200" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="170" y="230">Table</text>
+                    </a>
+                    <a href="profile.html">
+                        <rect class="node" x="300" y="200" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="380" y="230">Profile</text>
+                    </a>
+                    <a href="feedback.html">
+                        <rect class="node" x="520" y="200" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="590" y="230">Feedback</text>
+                    </a>
+                    <a href="volunteer.html">
+                        <rect class="node" x="740" y="200" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="800" y="230">Volunteer</text>
+                    </a>
+                    <a href="team.html">
+                        <rect class="node" x="960" y="200" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="1030" y="230">Team</text>
+                    </a>
+                    <a href="content.html">
+                        <rect class="node" x="1140" y="200" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="1200" y="230">Content</text>
+                    </a>
+                    <a href="content_ST1.html">
+                        <rect class="node" x="1000" y="300" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="1080" y="330">Content 1</text>
+                    </a>  
+                    <a href="content_ST2.html">
+                        <rect class="node" x="1000" y="400" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="1080" y="430">Content 2</text>
+                    </a> 
+                    <a href="content_ST3.html">
+                        <rect class="node" x="1000" y="500" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="1080" y="530">Content 3</text>
+                    </a>
+                    <a href="content_ST4.html">
+                        <rect class="node" x="1000" y="600" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="1080" y="630">Content 4</text>
+                    </a>
+                    
+                    <!--Connecting Lines-->
+                    <line x1="160" y1="150" x2="1220" y2="150" stroke="#00ffff" stroke-width="3" />
+                    <line x1="160" y1="150" x2="160" y2="200" stroke="#00ffff" stroke-width="3" />
+                    <line x1="370" y1="150" x2="370" y2="200" stroke="#00ffff" stroke-width="3" />
+                    <line x1="590" y1="70" x2="590" y2="200" stroke="#00ffff" stroke-width="3" />
+                    <line x1="810" y1="150" x2="810" y2="200" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1030" y1="150" x2="1030" y2="200" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1220" y1="150" x2="1220" y2="200" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1220" y1="250" x2="1220" y2="620" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1220" y1="620" x2="1140" y2="620" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1220" y1="520" x2="1140" y2="520" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1220" y1="420" x2="1140" y2="420" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1220" y1="320" x2="1140" y2="320" stroke="#00ffff" stroke-width="3" />
 
 
 
-                
-            </svg>
-        </div>
+
+
+
+
+                </svg>
+            </div>
+
+
+
+        </section>
 
 
         
-        <div class="footer">
-                <a href="page_editor.html">Visit Page Editor</a>
-        </div>
+        
 
 
         <footer style="background-color: #0000006d; color: white; text-align: center; padding: 20px 0; margin-top: 50px; font-size: 16px;">
@@ -221,17 +225,19 @@
                     <div style="margin: 10px;">
                         <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Contact Us</h3>
                         <p>Email: <a href="mailto:info@bluesanctuary.org" style="color: rgb(255, 161, 246); text-decoration: none;">info@bluesanctuary.org</a></p>
-                        <p>Phone: +1 (800) 123-4567</p>
-                        <p>Address: 123 Blue Haven, Ocean City, WC 12345</p>
+                        <p>Phone: +94701234567</p>
+                        <p>Address: 123 Blue Haven, Ocean City, Colombo 12345</p>
                     </div>
                     <!-- Quick Links -->
                     <div style="margin: 10px;">
                         <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Quick Links</h3>
                         <ul style="list-style: none; padding: 0;">
-                            <li><a href="html.html" style="color: white; text-decoration: none;">Home</a></li>
+                            <li><a href="home.html" style="color: white; text-decoration: none;">Home</a></li>
                             <li><a href="volunteer.html" style="color: white; text-decoration: none;">Volunteer</a></li>
                             <li><a href="feedback.html" style="color: white; text-decoration: none;">Feedback</a></li>
                             <li><a href="sitemap.html" style="color: white; text-decoration: none;">Sitemap</a></li>
+                            <li><a href="profile.html" style="color:white;text-decoration:none;">User Profile</a></li>
+                            <li><a href="content_ST4.html" style="color:white;text-decoration:none;">Content 4</a></li>
                         </ul>
                     </div>
                     <!-- Social Media -->
@@ -246,6 +252,7 @@
                 </div>
                 <hr style="border: 1px solid rgb(197, 197, 197); width: 80%; margin: 20px auto;">
                 <p style="color: rgb(197, 197, 197); font-size: 14px;">&copy; 2025 BlueSanctuary. All rights reserved.</p>
+                <a href="editor_4.html">Page Editor</a>
             </div>
         </footer>
 

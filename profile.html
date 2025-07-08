@@ -2,85 +2,14 @@
 
 <html lang = "en">
     <head>
-        <link rel="icon" type="png" href="/images/BlueSanctuaryIcon.PNG">
-        <title>BlueSanctuary </title>
+        <link rel="icon" type="image/PNG" href="<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/realthash/Web-Design-CW/refs/heads/main/images/BlueSanctuaryIcon.PNG">">
+        <title>BlueSanctuary</title>
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <style>
-            *{
-                margin:0;
-                padding:0;
-                box-sizing:border-box;
-                font-family:'Segoe UI',sans-serif;
-            }
-            body {
-    
-                margin-top: 100px;/* Creates a 100px space between the top edge of the page and the body content */    
-                padding: 0 200px;/* Applies 0 padding on top and bottom, and 200px padding on left and right to center the content */
 
-                color: aliceblue;/* Sets the text color to aliceblue, a soft light blue-white shade */
-                font-size: 17px;/* Defines the font size of all text within the body to 17 pixels */   
-
-
-                background-image: url(/images/cleaninghands1.jpg);/* Uses an image 'cleaninghands1.jpg' from the /images directory as the background */
-                background-repeat: no-repeat;/* Prevents the background image from tiling or repeating across the element */
-                background-position: bottom; /* Aligns the background image to the bottom of the body element */
-                background-attachment: fixed; /* Keeps the background image stationary while scrolling the page content */
-                background-size: cover;    /* Stretches the background image to fully cover the body element */
-                
-                font-family: 'Segoe UI', 'Arial', sans-serif;/* Sets the preferred font to 'Segoe UI', with 'Arial' and sans-serif as fallbacks */
-            }
-
-            nav {
-    
-                position: fixed;/* Locks the navigation bar in place at the top of the viewport, even when scrolling */    
-                font-family: 'Calibri', 'Segoe UI', 'Arial', sans-serif;/* Defines the font stack for navigation text, starting with 'Calibri' and falling back to 'Segoe UI', 'Arial', and sans-serif */
-                font-size: 23px;    /* Sets the font size of navigation text to 23 pixels for prominence */
-                font-weight: bold;/* Makes the navigation text bold for emphasis */
-                
-                top: 0;/* Positions the navigation bar exactly at the top edge of the viewport */
-                left: 0;/* Extends the navigation bar from the leftmost edge of the viewport */
-                right: 0; /* Extends the navigation bar to the rightmost edge of the viewport */
-                
-                background-color: rgba(255, 255, 255, 0.204);/* Applies a semi-transparent white background with 20.4% opacity for subtle contrast */
-                
-                display: flex;/* Arranges navigation items in a horizontal row using flexbox */
-                justify-content: center;/* Centers the navigation items horizontally within the bar */
-                align-items: center;/* Vertically aligns the navigation items to the middle of the bar */
-
-                padding: 0px;    /* Removes all padding from the navigation bar for a tight layout */
-    
-                z-index: 1000;/* Places the navigation bar above other elements with a high stacking order */
-            }
-
-            nav a {
-   
-                color: rgb(255, 255, 255); /* Colors all navigation links white for visibility against the background */
-                text-decoration: none;/* Removes the default underline from navigation links for a cleaner look */
-                
-                padding: 13px 30px;/* Adds 13px padding on top/bottom and 30px on left/right for clickable area spacing */
-                
-                transition: background-color 0.3s ease;/* Smoothly transitions the background color over 0.3 seconds when changed */
-            }
-
-            nav a:hover {
-    
-                color: rgb(80, 229, 255);/* Changes the link color to a light cyan-blue when hovered over */
-                
-                text-decoration: none;/* Ensures no underline appears when hovering over the link */
-            }
-
-            nav a.active {
-    
-                background: rgba(0, 0, 0, 0.532);/* Applies a semi-transparent black background with 53.2% opacity to the active link */
-                font-weight: bolder;/* Increases the boldness of the active link text for distinction */
-            }
-            p {
-                /* Adds 20px of padding below each paragraph to separate it from following content */
-                padding-bottom: 20px;
-            }
 
             .logo {
     
@@ -125,25 +54,21 @@
                 box-shadow:0 0 10px rgba(0,0,0,0.5);
             }
             section{
-                max-width:80%;
-                width:60%;
-                margin-bottom:40px;
-                padding:10px;
+                max-width:800px; /*Limits the section's minimum width*/
+                width:90%;
+                margin-bottom:40px; /*Add space netween each section*/
+                padding:25px;  /*Add space inside the section*/
                 align-items:center;
-                background-color:rgba(255,255,255,0.1);
+                background-color:rgba(26, 24, 24, 0.753);  /*Add semi transparent dark background*/
                 border-radius:15px;
-                box-shadow:0 4px 20px rgba(0,0,0,0.3);
-                transition:transform 0.3s;
+                box-shadow:0 4px 20px rgba(0,0,0,0.3);  /*Add subtle shadow for depth*/
                 color:#fff;
-            }
-            section:hover{
-                transform:scale(1.015);
             }
             section h2{
                 font-size:28px;
-                border-bottom:2px solid aqua;
-                margin-bottom:15px;
-                padding-bottom:10px;
+                border-bottom:2px solid aqua;  /*Add solid aqua-colored line below the element*/
+                margin-bottom:15px;  /*Add space below the element*/
+                padding-bottom:10px;  /*Add space between text and bottom border*/
             }
             p{
                 font-style:italic;
@@ -161,54 +86,53 @@
                 margin-bottom:20px;
             }
             .skill-group label, .goals-group label{
-                display:block;
+                display:block;  /*Make the element behave like a block element*/
                 font-size:16px;
-                margin-bottom:5px;
-                color:#fff;
+                margin-bottom:5px;  /*Add small space below element*/
+                color:#fff;  /*Set the text color*/
             }
             progress{
-                width:100%;
+                width:70%;
                 height:15px;
                 border-radius:10px;
             }
             progress::-webkit-progress-bar{
-                background-color:#ccc;
-                border-radius:10px;
+                background-color:#ccc;  /*Fill inside with the white color*/
+                border-radius:10px;  /*Formatting the border of the bars*/
             }
             progress::-webkit-progress-value{
                 background-color:#467ba3d7;
                 border-radius:10px;
             }
             h2{
-                text-align:center;
+                color:aqua;
             }
             .image-container{ 
-                padding:10px;
-                transition:transform 0.3s ease, box-shadow 0.3s ease;
+                padding:10px;/*Add 10px space inside the image on all sides*/
+                transition:transform 0.3s ease, box-shadow 0.3s ease;  /*Smoothly animates changes to the image transform and box-shadow over 0.3s using ease timing function*/
             }
             .image-container img{
-                width:100px;
-                height:auto;
+                width:100px;  /*Sets width of the image*/
+                height:auto;  /*Maintain the aspect ratio*/
                 align-items:center;
                 transition:transform 0.3s;
             }
             .image-container:hover{
-                transform:scale(1.05);
+                transform:scale(1.05);  /*Slightly enlarge the image container*/
             }
             .timetable-wrapper{
-                width:30%;
+                width:30%;  /*container's width*/
                 margin:20px auto;
-                display:flex;
+                display:flex;  /*uses flex layout*/
                 justify-content:center;
             }
             .styled-table{
-                max-width:1000px;
-                border-collapse:collapse;
+                max-width:1000px;  /*Limits maximum width of the table*/
+                border-collapse:collapse;  /*Removes space between the table cells*/
                 text-align:center;
-                background-color:#fff;
+                background-color:#fff;  /*Gives white background to the table*/
                 color:#333;
-                border-radius:12px;
-                overflow:hidden;
+                overflow:hidden;  /*Hides overflowing corners due to border-radius*/
                 box-shadow:0 0 15px rgba(0,0,0,0.3);
             }
             .styled-table thead{
@@ -217,23 +141,23 @@
             }
             .styled-table th,
             .styled-table td{
-                padding:14px 16px;
-                border:1px solid #ccc;
+                padding:14px 16px; /*Add inner space between cells*/
+                border:1px solid #ccc;/*seperate with the light gray border*/
             }
             .styled-table tbody tr:nth-child(even){
                 background-color:#f2f2f2;
             }
             .styled-table tbody tr:hover{
                 background-color:#e0f7fa;
-                transition:0.3s ease;
+                transition:0.3s ease;  /*Smooth background color change*/
             }
             .contact-section{
-                max-width:600px;
+                max-width:600px; /*Limits width of contact section*/
                 margin:60px auto;
-                background:rgba(255,255,255,0.1);
-                padding:40px;
-                border-radius:15px;
-                box-shadow:0 8px 20px rgba(0,0,0,0.2);
+                background:rgba(255,255,255,0.1); /*Semi transparent white background*/
+                padding:40px; /*Inner spacing around form*/
+                border-radius:15px; /*Round corners*/
+                box-shadow:0 8px 20px rgba(0,0,0,0.2);  /*Drop shadow for depth*/
             }
             .contact-section h2{
                 text-align:center;
@@ -248,18 +172,18 @@
             .form-group label{
                 display:block;
                 margin-bottom:8px;
-                font-weight:bold;
+                font-weight:bold;  /*Makes label text bold*/
                 color:#fff;
             }
             .form-group input,
             .form-group textarea{
                 width:100%;
                 padding:12px;
-                border:none;
-                border-radius:8px;
+                border:none; /*Removes default border*/
+                border-radius:8px;  /*Round corners*/
                 background:#f0f0f0;
                 color:#333;
-                font-size:16px;
+                font-size:16px;  /*Medium readable font*/
             }
             .form-group input::placeholder,
             .form-group textarea::placeholder{
@@ -270,14 +194,14 @@
                 gap:10px;
             }
             .form-buttons button{
-                flex:1;
+                flex:1;  /*Shares space equally*/
                 padding:14px;
                 font-size:16px;
                 font-weight:bold;
                 border:none;
                 border-radius:8px;
-                cursor:pointer;
-                transition:0.3s;
+                cursor:pointer;  /*Pointer cursor on hover*/
+                transition:0.3s;  /*Smooth transitions for hover effects*/
             }
             .form-buttons button[type="submit"]{
                 background:#2980b9;
@@ -299,8 +223,8 @@
             }
 
             footer{
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;  /*Rounds top-left corner*/
+                border-top-right-radius: 10px;  /*Rounds top-right corner*/
             }
         </style>
     </head>
@@ -308,17 +232,17 @@
     <body>
 
 
-        <!--navigation bar -->
-        <nav>
-            <a href="home.html"   class="active">Home</a>
-            <a href="volunteer.html">Volunteer</a>
-            <a href="table.html">Table</a>
-            <a href="profile.html">Profile</a>
-            <a href="feedback.html">Feedback</a>
-            <a href="sitemap.html">Sitemap</a>
-            <a href="team.html">Team</a>
-            <a href="content_ST2.html">Content</a>
-        </nav>
+         <!--navigation bar -->
+            <nav>
+                <a href="home.html"   class="active">Home</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="table.html">Table</a>
+                <a href="profile.html">Profile</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="sitemap.html">Sitemap</a>
+                <a href="team.html">Team</a>
+                <a href="content_ST4.html">Content</a>
+            </nav>
 
 
 
@@ -326,33 +250,40 @@
 
         <!--webpage logo-->
         <div >
-            <a href="home.html"><img src="D:/Osandi/Sem_2/Web_designing/CW/Web-Design-CW/Web-Design-CW/images/BlueSanctuary.PNG" alt="BlueSancuary logo" class="logo"></a>
+            <a href="home.html"><img src="BlueSanctuary.PNG" alt="BlueSancuary logo" class="logo"></a>
         </div> 
 
-
-
-        <header>
-            <h2>Blue Sanctuary</h2>
-            <img src="image.JPG" alt="image" class="circular-image">
-            <h3>Environmental Community Organizer</h3>
-
-             <p>"Join our mission to bring clean water and hygiene education to rural communities. As a volunteer, you’ll help create lasting impact."</p>
-        </header>
         
+        <section>
+            <header>
+                <h2>Blue Sanctuary</h2>
+                <!---Image with a class for styling-->
+                <img src="image.jpg" alt="D:\Osandi\Sem_2\Web_designing\CW\Web-Design-CW-main\Web-Design-CW-main\images\image.jpg" class="circular-image">
+                <h3>Environmental Community Organizer</h3>
+
+                <p>"Join our mission to bring clean water and hygiene education to rural communities. As a volunteer, you’ll help create lasting impact."</p>
+            </header>
+        </section>
+
 
         <section>
+
+        
             <h2>Skills</h2>
         
             <div class="skill-group">
-                <label for="communication">Communication</label><br>
+                <!--Progress bar showing 60% proficiency-->
+                <label for="communication">Communication</label>
                 <progress value="60" max="100"></progress>
             </div>
             <div class="skill-group">
-                <label for="leadership">Resource Management<label><br>
+                <!--Progress bar showing 70% proficiency-->
+                <label for="leadership">Resource Management</label>
                 <progress value="70" max="100"></progress>
             </div>
             <div class="skill-group">
-                <label for="confidence">Community Mobilization</label><br>
+                <!--Progress bar showing 60% proficiency-->
+                <label for="confidence">Community Mobilization</label>
                 <progress value="60" max="100"></progress>
             </div>
         </section>
@@ -363,23 +294,23 @@
             <ul>
                 <li>
                     <div class="goals-group">
-                        <label for="protect ecosystem">Protect Ecosystem</label><br>
+                        <label for="protect_ecosystem">Protect Ecosystem</label>
                 
                     </div>
                 </li>
                 <li>
                     <div class="goals-group">
-                        <label for="protect water sources">Protect water sources</label><br>
+                        <label for="protect_water_sources">Protect water sources</label>
                     </div>
                 </li>
                 <li>
                     <div class="goals-group">
-                        <label for="sustainable water management">Sustainable Water Management</label><br>
+                        <label for="sustainable_water_management">Sustainable Water Management</label>
                     </div>
                 </li>
                 <li>
                     <div class="goals-group">
-                        <label for="launching cleaning projects">Launching Cleaning Projects</label><br>
+                        <label for="launching_cleaning_projects">Launching Cleaning Projects</label>
                     </div>
                 </li>
             </ul>
@@ -399,6 +330,7 @@
         <section>
             <h2>UN Golas I Support</h2>
             <div class="image-container">
+                <!--Each image linkes to a specific UN SDG goal-->
                 <a href="https://sdgs.un.org/goals/goal1">
                     <img src="Goal_1.jpg" alt="Goal_1">
                 </a>
@@ -408,64 +340,76 @@
                 <a href="https://sdgs.un.org/goals/goal2">
                     <img src="Goal_2.jpg" alt="Goal_2">
                 </a>
+                <a href="https://sdgs.un.org/goals/goal8">
+                    <img src="Goal_8.jpg" alt="Goal_8">
+                </a>
+                <a href="https://sdgs.un.org/goals/goal3">
+                    <img src="Goal_3.jpg" alt="Goal_3">
+                </a>
+                <a href="https://sdgs.un.org/goals/goal14">
+                    <img src="Goal_14.jpg" alt="Goal_14">
+                </a>
+
             </div>
         </section>
 
         <section>
             <h2>Timetable</h2>
             <div class="timetable-wrapper">
+                <!---Wrapper to style and center the table-->
 
-            <table class="styled-table">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Monday</th>
-                        <th>Tuesday</th>
-                        <th>Wednesday</th>
-                        <th>Thursday</th>
-                        <th>Friday</th>
-                        <th>Saturday</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>8:30 - 11:30 AM</td>
-                        <td>Hygiene Training</td>
-                        <td>School Education program</td>
-                        <td>Well maintenance</td>
-                        <td>public Awareness program</td>
-                        <td>Meeting with the community</td>
-                        <td>Wrkshop program</td>
-                    </tr>
-                    <tr>
-                        <td>1:00 - 2:00 PM</td>
-                        <td>Water quality testing</td>
-                        <td>Community survey</td>
-                        <td>Rainwater Harvesting demo</td>
-                        <td>River clean-up</td>
-                        <td>Planning programs</td>
-                        <td> Meeting</td>
-                    </tr>
-                    <tr>
-                        <td>3:00 - 5:00 PM</td>
-                        <td>Volunteer Training</td>
-                        <td>Water Conservation Games</td>
-                        <td>Policy Discussion</td>
-                        <td>Meeting with the community</td>
-                        <td>Recycling Session</td>
-                        <td>Weekly wrap-up</td>
-                    </tr>
-                    <tr>
-                        <td>5:30 - 6:30 PM</td>
-                        <td></td>
-                        <td>Poster Design for Awareness</td>
-                        <td>Sharing Ideas</td>
-                        <td>Field Report Writing</td>
-                        <td></td>
-                        <td>Feedback Session</td>
-                    </tr>
-                </tbody>    
-            </table>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8:30 - 11:30 AM</td>
+                            <td>Hygiene Training</td>
+                            <td>School Education Program</td>
+                            <td>Well maintenance</td>
+                            <td>public Awareness Program</td>
+                            <td>Meeting with the community</td>
+                            <td>Workshop program</td>
+                        </tr>
+                        <tr>
+                            <td>1:00 - 2:00 PM</td>
+                            <td>Water quality testing</td>
+                            <td>Community survey</td>
+                            <td>Rainwater Harvesting demo</td>
+                            <td>River clean-up</td>
+                            <td>Planning Programs</td>
+                            <td>Meeting</td>
+                        </tr>
+                        <tr>
+                            <td>3:00 - 5:00 PM</td>
+                            <td>Volunteer Training</td>
+                            <td>Water Conservation Games</td>
+                            <td>Policy Discussion</td>
+                            <td>Meeting with the community</td>
+                            <td>Recycling Session</td>
+                            <td>Weekly wrap-up</td>
+                        </tr>
+                        <tr>
+                            <td>5:30 - 6:30 PM</td>
+                            <td></td>
+                            <td>Poster Design for Awareness</td>
+                            <td>Sharing Ideas</td>
+                            <td>Field Report Writing</td>
+                            <td></td>
+                            <td>Feedback Session</td>
+                        </tr>
+                    </tbody>    
+                </table>
+            </div>
         </section>
 
         <section>
@@ -535,6 +479,8 @@
                             <li><a href="volunteer.html" style="color: white; text-decoration: none;">Volunteer</a></li>
                             <li><a href="feedback.html" style="color: white; text-decoration: none;">Feedback</a></li>
                             <li><a href="sitemap.html" style="color: white; text-decoration: none;">Sitemap</a></li>
+                            <li><a href="profile.html" style="color:white;text-decoration:none;">User Profile</a></li>
+                            <li><a href="content_ST4.html" style="color:white;text-decoration:none;">Content 4</a></li>
                         </ul>
                     </div>
                     <!-- Social Media -->
@@ -549,6 +495,7 @@
                 </div>
                 <hr style="border: 1px solid rgb(197, 197, 197); width: 80%; margin: 20px auto;">
                 <p style="color: rgb(197, 197, 197); font-size: 14px;">&copy; 2025 BlueSanctuary. All rights reserved.</p>
+                <a href="editor_4.html">Page Editor</a>
             </div>
         </footer>
 
