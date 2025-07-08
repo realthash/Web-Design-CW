@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/BlueSanctuaryIcon.PNG">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Page - Thashmika Rathnayake </title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("Images/cleaninghands1.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      margin: 0;
+    }
+
+    header, footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+
+    main {
+      flex: 3;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    aside {
+      flex: 1;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      margin-left: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #a7e4f8;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 10px auto;
+      border: 2px solid #fff;
+      border-radius: 5px;
+    }
+
+    .top {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .top a {
+      background-color: #00aaff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    a {
+      color: #ffd166;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header id="top">
+    <h1>Validation Report</h1>
+    <p>Thashmika Rathnayake | Student 2</p>
+    <p>Role: Developer of Splash, Volunteer, and Content Pages</p>
+  </header>
+
+  <div class="container">
+    <main>
+      <!-- Home Validation -->
+      <section>
+        <h2 id="homeVal">Home Page Validation</h2>
+        <p>The Home page passed validation with no errors or warnings, confirming its structral and syntactical accuracy. I ensured all images had alt attributes and the font colours provide adequete contrast against the background for redability.</p>
+        <img src="/Validate/home-page.png" alt="home page validation screenshot">
+        <p><a href="page_editor_student2.html#home">Back to Page Editor – Home Section</a></p>
+      </section>
+
+      <!-- Table Validation -->
+      <section>
+        <h2 id="tableVal">Table Page Validation</h2>
+        <p> The table page passed validation successfully with no errors or warnings. I used semantic HTML form elements and associated labels correctly with their inputs. This helped maintain accessibility and ensured the page met HTML5 validation standards.</p>
+        <img src="/Validate/table.png" alt="table page validation screenshot">
+        <p><a href="page_editor_student2.html#table">Back to Page Editor – Table Section</a></p>
+      </section>
+
+      <!-- Content Page Validation -->
+      <section>
+        <h2 id="contentVal">Content Page Validation</h2>
+        <p>The content page passed validation without errors or warnings. I used a clear heading order and correct tags and attributes. I added alt text to all images and made sure the text and background had good contrast for easy reading</p>
+        <img src="/Validate/content-page.png" alt="Content page validation screenshot">
+        <p><a href="page_editor_student2.html#content">Back to Page Editor – Content Section</a></p>
+      </section>
+
+      <div class="top">
+        <a href="#top">Go to Top</a>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside>
+      <h3>Pages Developed</h3>
+      <ul>
+        <li><a href="#homeVal">Home Page Validation</a></li>
+        <li><a href="#tableVal">Table Page Validation</a></li>
+        <li><a href="#contentVal">Content Page Validation</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 BlueSanctuary Project | Thashmika Rathnayake</p>
+  </footer>
+</body>
+</html>

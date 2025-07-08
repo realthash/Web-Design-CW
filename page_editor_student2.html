@@ -1,0 +1,362 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/BlueSanctuaryIcon.PNG">
+    <link rel="stylesheet" href="style.css">
+    <title>Page Editor - Student 2</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0 100px;
+            color: aliceblue;
+            font-size: 17px;
+            background-image: url(/images/cleaninghands1.jpg);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-attachment: fixed;
+            background-size: cover;
+            cursor: default;
+        }
+
+        a{
+            color: rgb(0, 162, 255);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            max-width: 1200px;
+            margin: 80px auto 20px;
+            padding: 20px;
+        }
+
+        main {
+            flex: 3;
+        }
+
+        aside {
+            flex: 1;
+            background-color: rgba(0, 0, 0, 0.534);
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+
+        .stud {
+            text-align: center;
+            line-height: 1.5;
+            background-color: rgba(0, 0, 0, 0.763);
+            color: #fefefe;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .ref li {
+            list-style: none;
+            padding-bottom: 9px;
+        }
+
+        aside a {
+            text-decoration: none;
+            color: rgb(61, 210, 251);
+        }
+
+        aside li {
+            padding-bottom: 4px;
+        }
+
+        .top {
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+        }
+
+        .top a {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .top a:hover, .top a:focus {
+            background-color: #0056b3;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.656);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        footer a {
+            color: rgb(61, 210, 251);
+            text-decoration: none;
+        }
+
+        footer a:hover, footer a:focus {
+            color: white;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.656);
+            padding: 15px 20px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #c6ccd0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 19px;
+            position: relative;
+            border-radius: 5px;
+            padding: 6px 11px;
+            transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: rgb(255, 255, 255);
+            transform: scale(1.1);
+            background-color: rgba(0, 138, 177, 0.1);
+            border-radius: 5px;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: rgb(67, 218, 248);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 80%;
+        }
+
+        nav a.active {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            background-color: rgba(21, 189, 255, 0.2);
+        }
+
+
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 0 10px;
+            }
+            .container {
+                flex-direction: column;
+                margin-top: 100px;
+            }
+            aside {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html" target="_blank">Home</a>
+        <a href="volunteer.html" target="_blank">Volunteer</a>
+        <a href="table.html" target="_blank">Table</a>
+        <a href="profile.html" target="_blank">Profile</a>
+        <a href="feedback.html" target="_blank">Feedback</a>
+        <a href="sitemap.html" target="_blank">Sitemap</a>
+        <a href="team.html" target="_blank">Team</a>
+        <a href="content_ST2.html" target="_blank">Content</a>
+    </nav>
+
+        <!--webpage logo-->
+        <div >
+            <a href="home.html"><img src="/images/BlueSanctuary.PNG" alt="BlueSancuary logo" class="logo"></a>
+        </div> 
+
+
+    <div class="container">
+        <main>
+            <section class="stud">
+                <h2>Student 2</h2>
+                <p>Role: Website Style , Navigation Lead and Page Developer</p>
+            </section>
+
+            <section>
+                <h2>Completed Tasks/Pages</h2>
+                <ul>
+                    <li>Home Page (<a href="home.html" target="_blank">View Page</a>)</li>
+                    <li>Table Page (<a href="table.html" target="_blank">View Page</a>)</li>
+                    <li>Content Page (<a href="content_ST2.html" target="_blank">View Page</a>)</li>
+                </ul>
+            </section>
+
+            <section id="home">
+                <h2>Home Page</h2>
+                <h3>Technical Description</h3>
+                <p>The Home Page uses semantic HTML5 elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> to structure content clearly. The <code>&lt;nav&gt;</code> element contains links to all site pages, styled with flexbox for responsive alignment. A fixed background image (cleaninghands1.jpg) is applied via CSS <code>background-image</code> with <code>background-size: cover</code> for full coverage. The <code>&lt;img&gt;</code> element for the logo uses <code>position: fixed</code> and <code>z-index: 1001</code> to stay visible above content. CSS hover effects on navigation links use <code>transform: scale(1.1)</code> and an animated underline via <code>::after</code> for interactivity. The content is organized in card-like <code>&lt;article&gt;</code> elements with flexbox for responsive layouts, ensuring visual appeal across devices.</p>
+                <h3>Accessibility</h3>
+                <p>Semantic HTML improves screen reader navigation. The <code>alt</code> attribute on the logo image provides descriptive text. Navigation links are keyboard-accessible with visible focus states via CSS <code>:hover</code> and <code>:focus</code>. The <code>viewport</code> meta tag ensures responsiveness, and high-contrast text (aliceblue on dark backgrounds) meets WCAG contrast standards. Placeholder text in forms (if present) guides users without cluttering the UI.</p>
+                <p><a href="pageEditor_validator.html#home-validation" target="_blank">Link to Validation Page</a></p>
+                <p><a href="home.html" target="_blank">Link to Home Page</a></p>
+            </section>
+
+            <section id="table">
+                <h2>Table Page </h2>
+                <h3>Technical Description</h3>
+                <p>The Table Page uses a semantic <code>&lt;table&gt;</code> element to present data on global water and sanitation challenges. The <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> elements structure the table for clarity. CSS styles include zebra striping via <code>:nth-child(even)</code> for readability and hover highlights with <code>:hover</code> for interactivity. Flexbox in the <code>&lt;nav&gt;</code> and <code>&lt;footer&gt;</code> ensures consistent alignment with the site’s theme. The background image and fixed navbar from the global styles maintain visual consistency. The table is responsive, with percentage-based widths to adapt to different screen sizes.</p></p>
+                <h3>Accessibility</h3>
+                <p>The table includes <code>&lt;th&gt;</code> elements with <code>scope</code> attributes for screen reader compatibility. Text contrast is maintained with aliceblue on dark backgrounds. The responsive design ensures usability on mobile devices via the <code>viewport</code> meta tag. Keyboard navigation is supported for all links, and descriptive link text aids assistive technologies.</p>
+                <p><a href="pageEditor_validator.html#table-validation" target="_blank">Link to Validation Page</a></p>
+                <p><a href="table.html" target="_blank">Link to Table Page</a></p>
+            </section>
+
+            <section id="content">
+                <h2>Content Page</h2>
+                <h3>Technical Description</h3>
+                <p>The Content Page (content_ST2.html) uses HTML5 <code>&lt;section&gt;</code> elements to organize content about water and sanitation solutions. Internal anchor links (<code>&lt;a href="#section-id"&gt;</code>) enable smooth navigation within the page. Flexbox styles the navigation and footer, while a fixed background image enhances visual appeal. CSS <code>padding</code> and <code>margin</code> properties ensure content spacing, and <code>border-radius</code> on elements like the footer adds a modern aesthetic. The page is responsive, with percentage-based widths and media queries adjusting padding for smaller screens.</p>
+                <h3>Accessibility</h3>
+                <p>Semantic <code>&lt;section&gt;</code> and <code>&lt;nav&gt;</code> elements aid screen reader navigation. Anchor links are keyboard-accessible with clear focus states. Text contrast meets accessibility standards, and the responsive design ensures usability across devices. Image sources include descriptive citations, though <code>alt</code> text for images could be added to improve accessibility further.</p>
+                <p><a href="pageEditor_validator.html#content-validation" target="_blank">Link to Validation Page</a></p>
+                <p><a href="content_ST2.html" target="_blank">Link to Content Page</a></p>
+            </section>
+
+            <section>
+                <h2>Challenges and Lessons Learned</h2>
+                <p>Major Challenges were ensuring consistent styling across pages while maintaining responsiveness. Media queries were adjusted to handle padding on smaller screens. Broken links in early drafts were fixed by verifying paths and using relative URLs. Accessibility compliance required adding <code>alt</code> text and ensuring keyboard navigation, which taught the importance of testing with assistive technologies. Managing CSS conflicts, such as overlapping background styles, was resolved by prioritizing global styles. These challenges guided me through the processes of testing and iterative design.</p>
+            </section>
+
+            <section>
+                <h2>Compliance</h2>
+                <p>The pages comply with Janet regulations by using semantic HTML, ensuring accessibility with high-contrast text, and providing clear navigation. Valid HTML5 and CSS3 were used, verified through validation tools (linked in the validation page). Copyrighted images were sourced under royalty-free or Creative Commons licenses, with proper citations provided.</p>
+            </section>
+
+            <section>
+                <h2>References</h2>
+                <ul class="ref">
+                    <li id="ref1">World Health Organization. (2023). Progress on Household Drinking Water, Sanitation and Hygiene 2000–2022. Retrieved July 7, 2025, from <a href="https://washdata.org" target="_blank">washdata.org</a></li>
+                    <li id="ref2">The World Bank. (2022–2025). Water Overview and Project Reports. Retrieved July 7, 2025, from <a href="https://data.worldbank.org" target="_blank">data.worldbank.org</a></li>
+                    <li id="ref3">iStock. (2025). Royalty-Free Images. Retrieved July 7, 2025, from <a href="https://www.istockphoto.com" target="_blank">istockphoto.com</a></li>
+                    <li id="ref4">Unsplash. (2025). Licensed Photographs. Retrieved July 7, 2025, from <a href="https://unsplash.com" target="_blank">unsplash.com</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <aside>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <li><a href="volunteer.html" target="_blank">Volunteer</a></li>
+                <li><a href="feedback.html" target="_blank">Feedback</a></li>
+                <li><a href="sitemap.html" target="_blank">Sitemap</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <div class="top">
+        <a href="#top">Back to Top</a>
+    </div>
+
+    <footer>
+        <div>
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:info@bluesanctuary.org">info@bluesanctuary.org</a></p>
+            <p>Phone: +94 (70) 123-4567</p>
+            <p>Address: 123 Blue Haven, Ocean City, WC 12345</p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <li><a href="volunteer.html" target="_blank">Volunteer</a></li>
+                <li><a href="feedback.html" target="_blank">Feedback</a></li>
+                <li><a href="sitemap.html" target="_blank">Sitemap</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Follow Us</h3>
+            <p>
+                <a href="https://twitter.com" target="_blank">Twitter</a> |
+                <a href="https://facebook.com" target="_blank">Facebook</a> |
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </p>
+        </div>
+        <p>© 2025 BlueSanctuary. All rights reserved.</p>
+    </footer>
+</body>
+</html>

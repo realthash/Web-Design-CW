@@ -1,7 +1,8 @@
 body {
     
-    margin-top: 100px;/* Creates a 100px space between the top edge of the page and the body content */    
-    padding: 0 200px;/* Applies 0 padding on top and bottom, and 200px padding on left and right to center the content */
+    margin-top: 0;
+      
+    padding: 0 100px;/* Applies 0 padding on top and bottom, and 200px padding on left and right to center the content */
 
     color: aliceblue;/* Sets the text color to aliceblue, a soft light blue-white shade */
     font-size: 17px;/* Defines the font size of all text within the body to 17 pixels */   
@@ -14,58 +15,88 @@ body {
     background-size: cover;    /* Stretches the background image to fully cover the body element */
     
     font-family: 'Segoe UI', 'Arial', sans-serif;/* Sets the preferred font to 'Segoe UI', with 'Arial' and sans-serif as fallbacks */
+    cursor: default;
 }
 
-nav {
-    
-    position: fixed;/* Locks the navigation bar in place at the top of the viewport, even when scrolling */    
-    font-family: 'Calibri', 'Segoe UI', 'Arial', sans-serif;/* Defines the font stack for navigation text, starting with 'Calibri' and falling back to 'Segoe UI', 'Arial', and sans-serif */
-    font-size: 23px;    /* Sets the font size of navigation text to 23 pixels for prominence */
-    font-weight: bold;/* Makes the navigation text bold for emphasis */
-    
-    top: 0;/* Positions the navigation bar exactly at the top edge of the viewport */
-    left: 0;/* Extends the navigation bar from the leftmost edge of the viewport */
-    right: 0; /* Extends the navigation bar to the rightmost edge of the viewport */
-    
-    background-color: rgba(255, 255, 255, 0.204);/* Applies a semi-transparent white background with 20.4% opacity for subtle contrast */
-    
-    display: flex;/* Arranges navigation items in a horizontal row using flexbox */
-    justify-content: center;/* Centers the navigation items horizontally within the bar */
-    align-items: center;/* Vertically aligns the navigation items to the middle of the bar */
 
-    padding: 0px;    /* Removes all padding from the navigation bar for a tight layout */
-    
-    z-index: 1000;/* Places the navigation bar above other elements with a high stacking order */
+
+nav {
+
+    background-color: rgba(0, 0, 0, 0.656);
+    padding: 15px 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed; /* Fix navbar to top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure navbar is above other content */
 }
 
 nav a {
-   
-    color: rgb(255, 255, 255); /* Colors all navigation links white for visibility against the background */
-    text-decoration: none;/* Removes the default underline from navigation links for a cleaner look */
-    
-    padding: 13px 30px;/* Adds 13px padding on top/bottom and 30px on left/right for clickable area spacing */
-    
-    transition: background-color 0.3s ease;/* Smoothly transitions the background color over 0.3 seconds when changed */
+    color: #c6ccd0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 19px;
+    position: relative;
+    border-radius: 5px;
+    padding: 6px 11px;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
 nav a:hover {
-    
-    color: rgb(80, 229, 255);/* Changes the link color to a light cyan-blue when hovered over */
-    
-    text-decoration: none;/* Ensures no underline appears when hovering over the link */
+    color: rgb(255, 255, 255);
+    transform: scale(1.1); /* Subtle zoom effect */
+    background-color: rgba(0, 138, 177, 0.1); /* Slight background highlight */
+    border-radius: 5px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(67, 218, 248);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 80%; /* Animated underline effect */
 }
 
 nav a.active {
-    
-    background: rgba(0, 0, 0, 0.532);/* Applies a semi-transparent black background with 53.2% opacity to the active link */
-    font-weight: bolder;/* Increases the boldness of the active link text for distinction */
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: rgba(21, 189, 255, 0.2);
+
 }
- 
+a{
+    color:rgb(0, 174, 255);
+}
 
 p {
     /* Adds 20px of padding below each paragraph to separate it from following content */
     padding-bottom: 20px;
 }
+@media screen and (max-width: 768px) {
+            body {
+                padding: 0 10px;
+            }
+
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+        }
 
 .logo {
     
@@ -85,7 +116,7 @@ p {
 
 :link{
     text-decoration: none;/*Ensure links do not include decorations*/
-    color: rgb(95, 206, 225);
+    color: rgb(61, 210, 251);
 }
 
 footer{

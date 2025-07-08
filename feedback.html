@@ -11,7 +11,7 @@
       background-color: #f8f8f8;
       margin-top: 70px;
       margin-bottom: 20px;
-      display: flex;
+      display: block;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
@@ -24,6 +24,15 @@
       width: 100%;
       text-align: center;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    }
+
+    .form-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 70vh;
+      margin-top: 20px;
     }
     h1 {
       color: #4aa5cd;
@@ -99,68 +108,105 @@
           <a href="team.html">Team</a>
           <a href="content_ST2.html">Content</a>
       </nav>
-<form action="mailto:thashmikarathnayaka03@gmail.com" method="post">
-    <h1>Feedback form</h1>
-    <div class="required">Required fields *</div>
+      <div class="form-wrapper">
+      <form action="mailto:thashmikarathnayaka03@gmail.com" method="post" >
+          <h1>Feedback form</h1>
+          <div class="required">Required fields *</div>
 
-    <label>*Enter your name:</label>
-    <input type="text" name="name" required placeholder="Enter names here">
+          <label>*Enter your name:</label>
+          <input type="text" name="name" required placeholder="Enter names here">
 
-    <label>*Enter your email:</label>
-    <input type="email" name="email" required placeholder="Enter email here">
+          <label>*Enter your email:</label>
+          <input type="email" name="email" required placeholder="Enter email here">
 
-    <p>Was this your first time visiting?</p>
-    <div class="radio-group">
-      <label><input type="radio" name="first_time" value="Yes" required> Yes</label>
-      <label><input type="radio" name="first_time" value="No"> No</label>
-    </div>
+          <p>Was this your first time visiting?</p>
+          <div class="radio-group">
+            <label><input type="radio" name="first_time" value="Yes" required> Yes</label>
+            <label><input type="radio" name="first_time" value="No"> No</label>
+          </div>
 
-    <p>Was this website informative and easy to navigate through?</p>
-    <div class="radio-group">
-      <label><input type="radio" name="informative" value="Yes" required> Yes</label>
-      <label><input type="radio" name="informative" value="No"> No</label>
-    </div>
+          <p>Was this website informative and easy to navigate through?</p>
+          <div class="radio-group">
+            <label><input type="radio" name="informative" value="Yes" required> Yes</label>
+            <label><input type="radio" name="informative" value="No"> No</label>
+          </div>
 
-    <label>If "No", suggest any improvements for the future:</label>
-    <textarea name="suggestions" placeholder="Add your message here..."></textarea>
+          <label>If "No", suggest any improvements for the future:</label>
+          <textarea name="suggestions" placeholder="Add your message here..."></textarea>
 
-    <p>How satisfied are you with Our services? Choose from 0 to 10, with 1 being "Not satisfied at all!" and 10 being "Extremely satisfied!"</p>
-    <div class="rating">
-      <label><input type="radio" name="satisfaction" value="0"> 0</label>
-      <label><input type="radio" name="satisfaction" value="1"> 1</label>
-      <label><input type="radio" name="satisfaction" value="2"> 2</label>
-      <label><input type="radio" name="satisfaction" value="3"> 3</label>
-      <label><input type="radio" name="satisfaction" value="4"> 4</label>
-      <label><input type="radio" name="satisfaction" value="5"> 5</label>
-      <label><input type="radio" name="satisfaction" value="6"> 6</label>
-      <label><input type="radio" name="satisfaction" value="7"> 7</label>
-      <label><input type="radio" name="satisfaction" value="8"> 8</label>
-      <label><input type="radio" name="satisfaction" value="9"> 9</label>
-      <label><input type="radio" name="satisfaction" value="10"> 10</label>
-    </div>
+          <p>How satisfied are you with Our services? Choose from 0 to 10, with 1 being "Not satisfied at all!" and 10 being "Extremely satisfied!"</p>
+          <div class="rating">
+            <label><input type="radio" name="satisfaction" value="0"> 0</label>
+            <label><input type="radio" name="satisfaction" value="1"> 1</label>
+            <label><input type="radio" name="satisfaction" value="2"> 2</label>
+            <label><input type="radio" name="satisfaction" value="3"> 3</label>
+            <label><input type="radio" name="satisfaction" value="4"> 4</label>
+            <label><input type="radio" name="satisfaction" value="5"> 5</label>
+            <label><input type="radio" name="satisfaction" value="6"> 6</label>
+            <label><input type="radio" name="satisfaction" value="7"> 7</label>
+            <label><input type="radio" name="satisfaction" value="8"> 8</label>
+            <label><input type="radio" name="satisfaction" value="9"> 9</label>
+            <label><input type="radio" name="satisfaction" value="10"> 10</label>
+          </div>
 
-    <p>Would you recommend our services?</p>
-    <div class="radio-group">
-      <label><input type="radio" name="recommend" value="Yes" required> Yes</label>
-      <label><input type="radio" name="recommend" value="No"> No</label>
-    </div>
+          <p>Would you recommend our services?</p>
+          <div class="radio-group">
+            <label><input type="radio" name="recommend" value="Yes" required> Yes</label>
+            <label><input type="radio" name="recommend" value="No"> No</label>
+          </div>
 
-    <label>*Would you like to receive updates about the website and any offers?</label>
-    <select name="updates" required>
-      <option value="">--Select--</option>
-      <option value="email">Yes - via Email</option>
-      <option value="sms">Yes - via SMS</option>
-      <option value="none">No</option>
-    </select>
+          <label>*Would you like to receive updates about the website and any offers?</label>
+          <select name="updates" required>
+            <option value="">--Select--</option>
+            <option value="email">Yes - via Email</option>
+            <option value="sms">Yes - via SMS</option>
+            <option value="none">No</option>
+          </select>
 
-    <label>Do you have any additional questions or requests?</label>
-    <textarea name="additional" placeholder="Add your message here..."></textarea>
+          <label>Do you have any additional questions or requests?</label>
+          <textarea name="additional" placeholder="Add your message here..."></textarea>
 
-    <div class="submit-container">
-      <button class="submit-button" type="submit">Submit</button>
-    </div>
-  </form>
+          <div class="submit-container">
+            <button class="submit-button" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+<footer style="background-color: #0000006d; color: white; text-align: center; padding: 20px 0; margin-top: 50px; font-size: 16px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; padding-bottom: 20px;">
+                <!-- Contact Info -->
+                <div style="margin: 10px;">
+                    <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Contact Us</h3>
+                    <p>Email: <a href="mailto:info@bluesanctuary.org" style="color: rgb(255, 161, 246); text-decoration: none;">info@bluesanctuary.org</a></p>
+                    <p>Phone: +1 (800) 123-4567</p>
+                    <p>Address: 123 Blue Haven, Ocean City, WC 12345</p>
+                </div>
+                <!-- Quick Links -->
+                <div style="margin: 10px;">
+                    <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="html.html" style="color: white; text-decoration: none;">Home</a></li>
+                        <li><a href="volunteer.html" style="color: white; text-decoration: none;">Volunteer</a></li>
+                        <li><a href="feedback.html" style="color: white; text-decoration: none;">Feedback</a></li>
+                        <li><a href="sitemap.html" style="color: white; text-decoration: none;">Sitemap</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media -->
+                <div style="margin: 10px;">
+                    <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Follow Us</h3>
+                    <p>
+                        <a href="https://twitter.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Twitter</a>
+                        <a href="https://facebook.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Facebook</a>
+                        <a href="https://instagram.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Instagram</a>
+                    </p>
+                </div>
+            </div>
+            <hr style="border: 1px solid rgb(197, 197, 197); width: 80%; margin: 20px auto;">
+            <p style="color: rgb(197, 197, 197); font-size: 14px;">&copy; 2025 BlueSanctuary. All rights reserved.</p>
+            </div>
+        </footer>
+  
     </body>
 
-</footer>
+
 </html>
