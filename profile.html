@@ -2,7 +2,7 @@
 
 <html lang = "en">
     <head>
-        <link rel="icon" type="image/PNG" href="<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/realthash/Web-Design-CW/refs/heads/main/images/BlueSanctuaryIcon.PNG">">
+        <link rel="icon" type="image/png" href="images/BlueSanctuaryIcon.PNG">
         <title>BlueSanctuary</title>
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
@@ -10,6 +10,31 @@
 
         <style>
 
+            body {
+    
+                margin-top: 100px;/* Creates a 100px space between the top edge of the page and the body content */    
+                padding: 0 200px;/* Applies 0 padding on top and bottom, and 200px padding on left and right to center the content */
+
+                color: aliceblue;/* Sets the text color to aliceblue, a soft light blue-white shade */
+                font-size: 17px;/* Defines the font size of all text within the body to 17 pixels */   
+
+
+                background-image: url(cleaninghands1.jpg);/* Uses an image 'cleaninghands1.jpg' from the /images directory as the background */
+                background-repeat: no-repeat;/* Prevents the background image from tiling or repeating across the element */
+                background-position: bottom; /* Aligns the background image to the bottom of the body element */
+                background-attachment: fixed; /* Keeps the background image stationary while scrolling the page content */
+                background-size: cover;    /* Stretches the background image to fully cover the body element */
+    
+                font-family: 'Segoe UI', 'Arial', sans-serif;/* Sets the preferred font to 'Segoe UI', with 'Arial' and sans-serif as fallbacks */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            p {
+                /* Adds 20px of padding below each paragraph to separate it from following content */
+                padding-bottom: 20px;
+            }
 
             .logo {
     
@@ -234,10 +259,10 @@
 
          <!--navigation bar -->
             <nav>
-                <a href="home.html"   class="active">Home</a>
+                <a href="home.html">Home</a>
                 <a href="volunteer.html">Volunteer</a>
                 <a href="table.html">Table</a>
-                <a href="profile.html">Profile</a>
+                <a href="profile.html" class="active">Profile</a>
                 <a href="feedback.html">Feedback</a>
                 <a href="sitemap.html">Sitemap</a>
                 <a href="team.html">Team</a>
@@ -258,7 +283,7 @@
             <header>
                 <h2>Blue Sanctuary</h2>
                 <!---Image with a class for styling-->
-                <img src="image.jpg" alt="D:\Osandi\Sem_2\Web_designing\CW\Web-Design-CW-main\Web-Design-CW-main\images\image.jpg" class="circular-image">
+                <img src="image.jpg" alt="image" class="circular-image">
                 <h3>Environmental Community Organizer</h3>
 
                 <p>"Join our mission to bring clean water and hygiene education to rural communities. As a volunteer, you’ll help create lasting impact."</p>
@@ -273,17 +298,17 @@
         
             <div class="skill-group">
                 <!--Progress bar showing 60% proficiency-->
-                <label for="communication">Communication</label>
+                <label id="communication">Communication</label>
                 <progress value="60" max="100"></progress>
             </div>
             <div class="skill-group">
                 <!--Progress bar showing 70% proficiency-->
-                <label for="leadership">Resource Management</label>
+                <label id="leadership">Resource Management</label>
                 <progress value="70" max="100"></progress>
             </div>
             <div class="skill-group">
                 <!--Progress bar showing 60% proficiency-->
-                <label for="confidence">Community Mobilization</label>
+                <label id="confidence">Community Mobilization</label>
                 <progress value="60" max="100"></progress>
             </div>
         </section>
@@ -294,23 +319,23 @@
             <ul>
                 <li>
                     <div class="goals-group">
-                        <label for="protect_ecosystem">Protect Ecosystem</label>
+                        <label id="protect_ecosystem">Protect Ecosystem</label>
                 
                     </div>
                 </li>
                 <li>
                     <div class="goals-group">
-                        <label for="protect_water_sources">Protect water sources</label>
+                        <label id="protect_water_sources">Protect water sources</label>
                     </div>
                 </li>
                 <li>
                     <div class="goals-group">
-                        <label for="sustainable_water_management">Sustainable Water Management</label>
+                        <label id="sustainable_water_management">Sustainable Water Management</label>
                     </div>
                 </li>
                 <li>
                     <div class="goals-group">
-                        <label for="launching_cleaning_projects">Launching Cleaning Projects</label>
+                        <label id="launching_cleaning_projects">Launching Cleaning Projects</label>
                     </div>
                 </li>
             </ul>
@@ -328,7 +353,7 @@
         </section>
 
         <section>
-            <h2>UN Golas I Support</h2>
+            <h2>UN Goals I Support</h2>
             <div class="image-container">
                 <!--Each image linkes to a specific UN SDG goal-->
                 <a href="https://sdgs.un.org/goals/goal1">
@@ -413,6 +438,7 @@
         </section>
 
         <section>
+            <!--Contact me section-->
             <div class="contact-section">
                 <h2>Contact Me</h2>
                 <form action="#" method="post">
@@ -468,14 +494,14 @@
                     <div style="margin: 10px;">
                         <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Contact Us</h3>
                         <p>Email: <a href="mailto:info@bluesanctuary.org" style="color: rgb(255, 161, 246); text-decoration: none;">info@bluesanctuary.org</a></p>
-                        <p>Phone: +1 (800) 123-4567</p>
-                        <p>Address: 123 Blue Haven, Ocean City, WC 12345</p>
+                        <p>Phone: +94701234567</p>
+                        <p>Address: 123 Blue Haven, Ocean City, Colombo 12345</p>
                     </div>
                     <!-- Quick Links -->
                     <div style="margin: 10px;">
                         <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Quick Links</h3>
                         <ul style="list-style: none; padding: 0;">
-                            <li><a href="html.html" style="color: white; text-decoration: none;">Home</a></li>
+                            <li><a href="home.html" style="color: white; text-decoration: none;">Home</a></li>
                             <li><a href="volunteer.html" style="color: white; text-decoration: none;">Volunteer</a></li>
                             <li><a href="feedback.html" style="color: white; text-decoration: none;">Feedback</a></li>
                             <li><a href="sitemap.html" style="color: white; text-decoration: none;">Sitemap</a></li>
