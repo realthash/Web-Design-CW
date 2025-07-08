@@ -22,14 +22,14 @@
 
 
 body {
-  background-image: url('../Images/background.jpg'); 
+  background-image: url('https://raw.githubusercontent.com/realthash/Web-Design-CW/refs/heads/main/images/cleaninghands1.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   margin: 0;
   font-family:'Poppins' , sans-serif;
-  color: white; /* or any color that matches your image */
+  color: rgb(255, 255, 255); /* or any color that matches your image */
   text-align: center;
   padding-top: 50px;
 }
