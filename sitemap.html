@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/png" href="BlueSanctuaryIcon.PNG">
+        <title>BlueSanctuary </title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* Global styles */
+            body {
+    
+                margin-top: 100px;/* Creates a 100px space between the top edge of the page and the body content */    
+                padding: 0 200px;/* Applies 0 padding on top and bottom, and 200px padding on left and right to center the content */
+
+                color: aliceblue;/* Sets the text color to aliceblue, a soft light blue-white shade */
+                font-size: 17px;/* Defines the font size of all text within the body to 17 pixels */   
+
+
+                background-image: url(cleaninghands1.jpg);/* Uses an image 'cleaninghands1.jpg' from the /images directory as the background */
+                background-repeat: no-repeat;/* Prevents the background image from tiling or repeating across the element */
+                background-position: bottom; /* Aligns the background image to the bottom of the body element */
+                background-attachment: fixed; /* Keeps the background image stationary while scrolling the page content */
+                background-size: cover;    /* Stretches the background image to fully cover the body element */
+                
+                font-family: 'Segoe UI', 'Arial', sans-serif;/* Sets the preferred font to 'Segoe UI', with 'Arial' and sans-serif as fallbacks */
+            }
+
+            section{
+                max-width:800px; /*Limits the section's minimum width*/
+                width:90%;
+                margin-bottom:40px; /*Add space netween each section*/
+                padding:25px;  /*Add space inside the section*/
+                align-items:center;
+                background-color:rgba(26, 24, 24, 0.753);  /*Add semi transparent dark background*/
+                border-radius:15px;
+                box-shadow:0 4px 20px rgba(0,0,0,0.3);  /*Add subtle shadow for depth*/
+                color:#fff;
+            }
+            header{
+
+                background:#004d40;  /*Deep teal background*/
+                color:white;
+                padding:1rem;  /*Provides vertical space*/
+                text-align:center;  /*Center all inline text*/
+                box-shadow:0 4px 6px rgba(0,0,0,0.1);
+            }
+            h1{
+                text-align:center;
+                margin-top:20px;  /*Add space above the heading*/
+                color:#6ba6c7;
+                font-size:2.2rem;
+            }
+            
+            
+            p{
+                font-style:italic;
+                margin-bottom:20px;  /*Add vertical space*/
+                line-height:1.6;  /*Improves readability with line spacing*/ 
+            }
+            .sitemap-container{
+                width:100%; /*Stretches full width*/
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                text-align:center;
+            }
+            svg{
+                width:100%;
+                height:auto;
+            }
+            .node{
+                fill:#4bbec6;
+                stroke:#064f58;
+                stroke-width:2;
+            }
+            text{
+                font-size:14px;
+                fill:#fff;
+                pointer-events:none;
+                text-anchor:middle;
+                text-decoration:none;
+            }
+            .logo {
+    
+                position: fixed;/* Fixes the logo in a stationary position relative to the viewport */
+                
+                top: 0;/* Places the logo at the top edge of the viewport */
+                left: 0;/* Aligns the logo to the left edge of the viewport */
+                
+                padding-left: 30px;/* Adds 30px of padding to the left of the logo for spacing from the edge */
+                padding-top: 5px;/* Adds 5px of padding above the logo for slight offset from the top */
+                
+                width: 120px;/* Sets the logo image width to 120 pixels */   
+                height: auto;/* Automatically adjusts the logo height to maintain its aspect ratio */
+
+                z-index: 1001;/* Ensures the logo stays above other elements with a higher stacking order */
+            }
+
+            :link{
+                text-decoration: none;/*Ensure links do not include decorations*/
+                color: rgb(95, 206, 225);
+            }
+
+            footer{
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!--navigation bar -->
+        <nav>
+
+            <a href="home.html">Home</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="table.html">Table</a>
+            <a href="profile.html">Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="sitemap.html" class="active">Sitemap</a>
+            <a href="team.html">Team</a>
+            <a href="content_ST4.html">Content</a>
+        </nav>
+
+
+
+
+
+        <!--webpage logo-->
+        <div class="logo-container" >
+            <a href="home.html"><img src="BlueSanctuary.PNG" alt="BlueSancuary logo" class="logo"></a>
+        </div> 
+
+
+        <section>
+            <h1>Site Map</h1>
+
+            <!--Container to center the sitemap SVG-->
+            <div class="sitemap-container">
+                <!--SVG elements for visual site map layout-->
+                <svg viewBox="0 0 1300 800">
+                    <a href="home.html">
+                        <rect class="node" x="520" y="20" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="590" y="45">Home</text>
+                    </a>
+                    <a href="table.html">
+                        <rect class="node" x="80" y="200" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="170" y="230">Table</text>
+                    </a>
+                    <a href="profile.html">
+                        <rect class="node" x="300" y="200" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="380" y="230">Profile</text>
+                    </a>
+                    <a href="feedback.html">
+                        <rect class="node" x="520" y="200" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="590" y="230">Feedback</text>
+                    </a>
+                    <a href="volunteer.html">
+                        <rect class="node" x="740" y="200" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="800" y="230">Volunteer</text>
+                    </a>
+                    <a href="team.html">
+                        <rect class="node" x="960" y="200" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="1030" y="230">Team</text>
+                    </a>
+                    <a href="content.html">
+                        <rect class="node" x="1140" y="200" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="1200" y="230">Content</text>
+                    </a>
+                    <a href="content_ST1.html">
+                        <rect class="node" x="1000" y="300" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="1080" y="330">Content 1</text>
+                    </a>  
+                    <a href="content_ST2.html">
+                        <rect class="node" x="1000" y="400" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="1080" y="430">Content 2</text>
+                    </a> 
+                    <a href="content_ST3.html">
+                        <rect class="node" x="1000" y="500" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="1080" y="530">Content 3</text>
+                    </a>
+                    <a href="content_ST4.html">
+                        <rect class="node" x="1000" y="600" width="140" height="50" rx="10" ry="10"></rect>
+                        <text x="1080" y="630">Content 4</text>
+                    </a>
+                    
+                    <!--Connecting Lines-->
+                    <line x1="160" y1="150" x2="1220" y2="150" stroke="#00ffff" stroke-width="3" />
+                    <line x1="160" y1="150" x2="160" y2="200" stroke="#00ffff" stroke-width="3" />
+                    <line x1="370" y1="150" x2="370" y2="200" stroke="#00ffff" stroke-width="3" />
+                    <line x1="590" y1="70" x2="590" y2="200" stroke="#00ffff" stroke-width="3" />
+                    <line x1="810" y1="150" x2="810" y2="200" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1030" y1="150" x2="1030" y2="200" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1220" y1="150" x2="1220" y2="200" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1220" y1="250" x2="1220" y2="620" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1220" y1="620" x2="1140" y2="620" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1220" y1="520" x2="1140" y2="520" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1220" y1="420" x2="1140" y2="420" stroke="#00ffff" stroke-width="3" />
+                    <line x1="1220" y1="320" x2="1140" y2="320" stroke="#00ffff" stroke-width="3" />
+
+
+
+
+
+
+
+                </svg>
+            </div>
+
+
+
+        </section>
+
+
+        
+        
+
+
+        <footer style="background-color: #0000006d; color: white; text-align: center; padding: 20px 0; margin-top: 50px; font-size: 16px;">
+
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; padding-bottom: 20px;">
+                    <!-- Contact Info -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Contact Us</h3>
+                        <p>Email: <a href="mailto:info@bluesanctuary.org" style="color: rgb(255, 161, 246); text-decoration: none;">info@bluesanctuary.org</a></p>
+                        <p>Phone: +94701234567</p>
+                        <p>Address: 123 Blue Haven, Ocean City, Colombo 12345</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Quick Links</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><a href="home.html" style="color: white; text-decoration: none;">Home</a></li>
+                            <li><a href="volunteer.html" style="color: white; text-decoration: none;">Volunteer</a></li>
+                            <li><a href="feedback.html" style="color: white; text-decoration: none;">Feedback</a></li>
+                            <li><a href="sitemap.html" style="color: white; text-decoration: none;">Sitemap</a></li>
+                            <li><a href="profile.html" style="color:white;text-decoration:none;">User Profile</a></li>
+                            <li><a href="content_ST4.html" style="color:white;text-decoration:none;">Content 4</a></li>
+                        </ul>
+                    </div>
+                    <!-- Social Media -->
+                    <div style="margin: 10px;">
+                        <h3 style="color: rgb(66, 224, 255); margin-bottom: 10px;">Follow Us</h3>
+                        <p>
+                            <a href="https://twitter.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Twitter</a>
+                            <a href="https://facebook.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Facebook</a>
+                            <a href="https://instagram.com" style="color: rgb(255, 161, 246); text-decoration: none; margin: 0 10px;">Instagram</a>
+                        </p>
+                    </div>
+                </div>
+                <hr style="border: 1px solid rgb(197, 197, 197); width: 80%; margin: 20px auto;">
+                <p style="color: rgb(197, 197, 197); font-size: 14px;">&copy; 2025 BlueSanctuary. All rights reserved.</p>
+                <a href="editor_4.html">Page Editor</a>
+            </div>
+        </footer>
+
+
+    </body>
+</html>
