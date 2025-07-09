@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Page - Thavinsa Kariapperuma</title>
+  <link rel="stylesheet" href="css/pageEditor_validator.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("Images/cleaninghands1.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      margin: 0;
+    }
+
+    header, footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+
+    main {
+      flex: 3;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    aside {
+      flex: 1;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      margin-left: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #a7e4f8;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 10px auto;
+      border: 2px solid #fff;
+      border-radius: 5px;
+    }
+
+    .top {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .top a {
+      background-color: #00aaff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    a {
+      color: #ffd166;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header id="top">
+    <h1>Validation Report</h1>
+    <p>Thavinsa Kariapperuma | Student 1</p>
+    <p>Role: Developer of Splash, Volunteer, and Content Pages</p>
+  </header>
+
+  <div class="container">
+    <main>
+      <!-- Splash Validation -->
+      <section>
+        <h2 id="splashVal">Splash Page Validation</h2>
+        <p>The splash page passed validation with no errors and no warnings. This confirms semantic and structural accuracy. I ensured all images had alt attributes and that font contrast was readable over the background.</p>
+        <img src="images/validationSnapshots/validation_splash.png" alt="Splash page validation screenshot">
+        <p><a href="pageEditor_ST1.html#splash">Back to Page Editor – Splash Section</a></p>
+      </section>
+
+      <!-- Volunteer Validation -->
+      <section>
+        <h2 id="volunteerVal">Volunteer Page Validation</h2>
+        <p>The volunteer page passed validation successfully with no errors or warnings. I used semantic HTML form elements and associated labels correctly with their inputs. This helped maintain accessibility and ensured the page met HTML5 validation standards.</p>
+        <img src="images/validationSnapshots/validation_volunteer.png" alt="Volunteer page validation screenshot">
+        <p><a href="pageEditor_ST1.html#volunteer">Back to Page Editor – Volunteer Section</a></p>
+      </section>
+
+      <!-- Content Page Validation -->
+      <section>
+        <h2 id="contentVal">Content Page Validation</h2>
+        <p>The content page passed validation with no errors and no warnings.I followed a consistent heading structure and used appropriate tags and attributes throughout. I also ensured all images included alt text and that text-to-background contrast supported readability.</p>
+        <img src="images/validationSnapshots/validation_content.png" alt="Content page validation screenshot">
+        <p><a href="pageEditor_ST1.html#content">Back to Page Editor – Content Section</a></p>
+      </section>
+
+      <div class="top">
+        <a href="#top">Go to Top</a>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside>
+      <h3>Pages Developed</h3>
+      <ul>
+        <li><a href="#splashVal">Splash Page Validation</a></li>
+        <li><a href="#volunteerVal">Volunteer Page Validation</a></li>
+        <li><a href="#contentVal">Content Page Validation</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 BlueSanctuary Project | Thavinsa Kariapperuma</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Editor – Lasal Nethsara</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+     body {
+      background-color: #eef8f7;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding-top: 80px;
+      color: #333;
+    }
+
+    .content-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: hsla(0, 0%, 100%, 0.702);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #0088a9;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #005b69;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 1.05em;
+      line-height: 1.6em;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    li {
+      padding-bottom: 8px;
+    }
+
+    .highlight {
+      background-color: #d0f0f3;
+      padding: 10px;
+      border-left: 4px solid #0088a9;
+      margin-top: 20px;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      padding: 30px 0;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .content-wrapper {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+   
+
+<div class="content-wrapper" >
+  <h1>Editor’s Page – Lasal Nethsara</h1>
+
+  <section>
+    <h2>1. Content Overview</h2>
+    <p><strong>Name:</strong> Uberathna Waduacharige Lasal Nethsara</p>
+    <p><strong>Role:</strong> Interaction & Feedback Designer</p>
+    <p><strong>Completed Tasks:</strong></p>
+    <ul>
+      <li><a href="feedback.html" target="_blank">Feedback Page</a></li>
+      <li><a href="team.html" target="_blank">Team Page</a></li>
+      <li><a href="content_ST3.html" target="_blank">Content Page (ST3 – SDG 6)</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. Technical Description</h2>
+
+    <h3>Feedback Page</h3>
+    <p>This page was built using HTML forms for user input, including <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> tags. CSS was used to validate fields and align the form responsively. Important features included <code>required</code> attributes for accessibility and JavaScript for submission validation. I styled buttons with transitions and shadows to enhance interaction.</p>
+
+    <h3>Team Page</h3>
+    <p>Built using Flexbox to create a responsive grid of team members. Each member profile includes a hover-reveal box using max-height transitions. Key HTML elements included <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;ul&gt;</code>. CSS classes like <code>.member</code> and <code>.details</code> used border transitions, opacity effects, and shadowing to create interactive profiles.</p>
+
+    <h3>Content Page (ST3)</h3>
+    <p>Created an informative page titled “What You Can Do to Support SDG 6.” Key HTML structure includes semantic tags: <code>&lt;section&gt;</code>, <code>&lt;h2&gt;</code>, and <code>&lt;ul&gt;</code>. I used media queries to ensure the content displayed well on all devices. The design used a soft palette and emphasis classes like <code>.highlight</code> to separate impactful messages.</p>
+  </section>
+
+  <section>
+    <h2>3. Organization</h2>
+    <p>Each section in this page is clearly marked and categorized with headers for clarity. Navigation was adapted from the project template and aligned with the specific needs of this page. All links open in a new tab.</p>
+  </section>
+
+  <section>
+    <h2>4. Links</h2>
+    <ul>
+      <li><a href="feedback.html" target="_blank">Feedback Page</a></li>
+      <li><a href="team.html" target="_blank">Team Page</a></li>
+      <li><a href="content_ST3.html" target="_blank">Content Page (ST3)</a></li>
+      <li><a href="validation.html#feedback" target="_blank">Feedback Page Validation</a></li>
+      <li><a href="validation.html#team" target="_blank">Team Page Validation</a></li>
+      <li><a href="validation.html#content3" target="_blank">Content Page Validation</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. Challenges and Lessons Learned</h2>
+    <p>One challenge was achieving responsive layout for the team profiles. I solved this by using Flexbox with <code>flex-wrap</code> and <code>justify-content: center</code>. Another issue was styling form elements consistently across browsers, which I fixed using reset styles and consistent font and padding rules. This project taught me the value of modular CSS and semantic HTML.</p>
+  </section>
+
+  <section>
+    <h2>6. Accessibility</h2>
+    <p>I ensured that all forms had labels connected to input fields using <code>for</code> and <code>id</code> attributes. Team profiles are navigable with keyboard using <code>tabindex="0"</code>. I also used ARIA roles like <code>role="listitem"</code> and <code>aria-labelledby</code> for screen readers.</p>
+  </section>
+
+  <section>
+    <h2>7. Compliance</h2>
+    <p>All pages follow W3C validation standards and the UK’s Janet web publication regulations. Content is accessible, readable, and includes appropriate metadata. Images are optimized and hosted securely. The site does not include advertising, third-party cookies, or tracking scripts, ensuring user privacy and compliance.</p>
+  </section>
+
+  <section>
+    <h2>8. References</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+      <li>Westminster Web Design Lectures (2025)</li>
+      <li>W3Schools – Flexbox Guide</li>
+      <li><a href="https://www.w3.org/WAI/" target="_blank">W3C Web Accessibility Initiative</a></li>
+    </ul>
+  </section>
+</div>
+
+  <footer>
+    &copy; 2025 Lasal Nethsara – BlueSanctuary Team Project
+  </footer>
+
+</body>
+</html>

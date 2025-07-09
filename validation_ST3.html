@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Validation Page – Lasal Nethsara</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 30px;
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      color: #003366;
+    }
+    section {
+      margin-bottom: 50px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Validation Page – Lasal Nethsara</h1>
+
+  <section id="feedback-validation">
+    <h2>Feedback Page Validation</h2>
+    <p>The Feedback page was validated using the W3C Markup Validation Service. No errors were found, and only minor accessibility warnings were issued.</p>
+    <img src="file:///Users/lasal/Documents/IIT/Web%20Designing/final/WhatsApp%20Image%202025-07-06%20at%203.08.31%E2%80%AFPM.jpeg" alt="Validation screenshot for feedback.html">
+    <h3>Reflection:</h3>
+    <p>Ensuring all inputs had correct label associations and proper HTML5 syntax helped pass the validator easily. This reinforced the value of writing clean, semantic HTML from the start.</p>
+  </section>
+
+  <section id="team-validation">
+    <h2>Team Page Validation</h2>
+    <p>This page was validated successfully with all structural and accessibility standards met. ARIA roles were reviewed and adjusted to avoid deprecated values.</p>
+    <img src="images/validation_team.png" alt="Validation screenshot for team.html">
+    <h3>Reflection:</h3>
+    <p>Initial validation failed due to incorrect use of <code>role="listitem"</code>. After reviewing the standard, I replaced it with correct HTML semantics, which resolved the issue.</p>
+  </section>
+
+  <section id="content-validation">
+    <h2>Content Page ST3 Validation</h2>
+    <p>The SDG 6 content page passed all HTML5 validation checks. Structure and internal linking were verified.</p>
+    <img src="file:///Users/lasal/Documents/IIT/Web%20Designing/final/WhatsApp%20Image%202025-07-06%20at%2010.10.17%E2%80%AFPM.jpeg" alt="Validation screenshot for content_ST3.html">
+    <h3>Reflection:</h3>
+    <p>One challenge was ensuring that internal anchor links were valid and uniquely identified by IDs. I learned the importance of matching <code>href="#section-id"</code> with a corresponding element in the document.</p>
+  </section>
+
+</body>
+</html>
